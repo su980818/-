@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>장승우 — 경력기술서</title>
+<meta name="description" content="LLM 기반 Generative Recommendation, Semantic ID, 경량 딥러닝 모델 연구 경력기술서">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root{
+    --paper:#F2F4F7;
+    --sheet:#FFFFFF;
+    --ink:#17233A;
+    --ink-2:#4A5568;
+    --ink-3:#8593A5;
+    --rule:#D6DCE4;
+    --teal:#1F6E78;
+    --teal-soft:#E3F0F1;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    word-break:keep-all;
+  }
+  a{color:var(--teal);text-decoration:none;border-bottom:1px solid transparent}
+  a:hover,a:focus-visible{border-bottom-color:currentColor}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+
+  .page{max-width:1080px;margin:0 auto;padding:56px 24px 96px}
+
+  /* ---------- 상단: 이름과 한 줄 소개 ---------- */
+  header.hero{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:28px;
+    padding-bottom:40px;
+    border-bottom:1px solid var(--rule);
+  }
+  @media (min-width:820px){header.hero{grid-template-columns:1.4fr 1fr;gap:56px}}
+  .hero h1{
+    font-size:clamp(34px,5vw,52px);
+    font-weight:800;
+    letter-spacing:-0.03em;
+    line-height:1.15;
+    margin:0 0 14px;
+  }
+  .hero h1 .en{display:block;font-size:.42em;font-weight:500;color:var(--ink-3);letter-spacing:0;margin-top:6px}
+  .hero p.lead{
+    font-size:19px;
+    color:var(--ink-2);
+    margin:0;
+    max-width:36em;
+  }
+  .contact{
+    align-self:end;
+    font-size:15px;
+    color:var(--ink-2);
+    display:grid;
+    grid-template-columns:auto 1fr;
+    column-gap:20px;
+    row-gap:6px;
+  }
+  .contact dt{color:var(--ink-3);margin:0}
+  .contact dd{margin:0}
+
+  /* ---------- 핵심 성과 요약 ---------- */
+  .highlights{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:0;
+    margin:0;
+    padding:28px 0;
+    border-bottom:1px solid var(--rule);
+    list-style:none;
+  }
+  .highlights li{padding:0 24px 0 0}
+  .highlights li+li{border-left:1px solid var(--rule);padding-left:24px}
+  @media (max-width:640px){
+    .highlights li+li{border-left:0;padding-left:0;padding-top:16px;margin-top:16px;border-top:1px solid var(--rule)}
+  }
+  .highlights strong{display:block;font-size:17px;font-weight:700;margin-bottom:4px}
+  .highlights span{color:var(--ink-2);font-size:14.5px}
+
+  /* ---------- 경력 항목 ---------- */
+  h2.section{
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink-3);
+    margin:48px 0 8px;
+  }
+  article.entry{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px 48px;
+    padding:36px 0;
+    border-top:1px solid var(--rule);
+  }
+  article.entry:first-of-type{border-top:0;padding-top:20px}
+  @media (min-width:820px){article.entry{grid-template-columns:200px 1fr}}
+  .meta{font-size:14.5px;color:var(--ink-2);line-height:1.6}
+  .meta .period{display:block;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+  .meta .role{display:block;margin-top:4px}
+  .meta .tag{
+    display:inline-block;
+    margin-top:12px;
+    padding:3px 10px;
+    border-radius:3px;
+    background:var(--teal-soft);
+    color:var(--teal);
+    font-size:13px;
+    font-weight:600;
+  }
+  .body h3{
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    line-height:1.35;
+    margin:0 0 14px;
+  }
+  .body p{margin:0 0 14px;color:var(--ink-2);max-width:42em}
+  .body p.pub{
+    color:var(--ink);
+    padding:14px 18px;
+    border-left:3px solid var(--teal);
+    background:var(--sheet);
+    font-size:15px;
+  }
+  .body p.pub em{font-style:normal;font-weight:600}
+  .body h4{
+    font-size:15px;
+    font-weight:600;
+    margin:22px 0 8px;
+    color:var(--ink);
+  }
+  .body ul{margin:0;padding-left:0;list-style:none;max-width:44em}
+  .body li{
+    position:relative;
+    padding-left:18px;
+    margin-bottom:8px;
+    color:var(--ink-2);
+  }
+  .body li::before{
+    content:"";
+    position:absolute;
+    left:0;top:.72em;
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--rule);
+  }
+  .body li b{color:var(--ink);font-weight:600}
+  .body li.result::before{background:var(--teal)}
+  .body li.result{color:var(--ink)}
+
+  table.plain{width:100%;border-collapse:collapse;font-size:15.5px}
+  table.plain td{padding:10px 0;border-top:1px solid var(--rule);vertical-align:top}
+  table.plain tr:first-child td{border-top:0}
+  table.plain td.when{width:150px;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;padding-right:16px;white-space:nowrap}
+  table.plain td.note{width:32%;color:var(--ink-2);padding-left:24px;text-align:right}
+  @media (max-width:640px){
+    table.plain,table.plain tr,table.plain td{display:block;width:auto}
+    table.plain td{border-top:0;padding:2px 0}
+    table.plain tr{border-top:1px solid var(--rule);padding:10px 0}
+    table.plain td.note{text-align:left;padding-left:0;font-size:14px}
+  }
+  footer{
+    margin-top:64px;
+    padding-top:20px;
+    border-top:1px solid var(--rule);
+    font-size:13.5px;
+    color:var(--ink-3);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  @media print{
+    body{background:#fff;font-size:12.5px;line-height:1.5}
+    .page{padding:0;max-width:none}
+    .hero h1{font-size:30px}
+    article.entry{padding:18px 0;break-inside:avoid}
+    .body p.pub{background:none;padding-left:12px}
+    table.plain{width:100%;border-collapse:collapse;font-size:15.5px}
+  table.plain td{padding:10px 0;border-top:1px solid var(--rule);vertical-align:top}
+  table.plain tr:first-child td{border-top:0}
+  table.plain td.when{width:150px;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;padding-right:16px;white-space:nowrap}
+  table.plain td.note{width:32%;color:var(--ink-2);padding-left:24px;text-align:right}
+  @media (max-width:640px){
+    table.plain,table.plain tr,table.plain td{display:block;width:auto}
+    table.plain td{border-top:0;padding:2px 0}
+    table.plain tr{border-top:1px solid var(--rule);padding:10px 0}
+    table.plain td.note{text-align:left;padding-left:0;font-size:14px}
+  }
+  footer{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div>
+      <h1>장승우 <span class="en">Seung Woo Jang</span></h1>
+      <p class="lead">LLM 기반 추천 시스템과 경량 딥러닝 모델을 연구합니다. 텍스트 정보와 사용자 행동 그래프를 함께 다루는 Generative Recommendation이 현재의 주요 연구 주제입니다.</p>
+    </div>
+    <dl class="contact">
+      <dt>이메일</dt><dd><a href="mailto:su980818@naver.com">su980818@naver.com</a></dd>
+      <dt>GitHub</dt><dd><a href="https://github.com/">github.com/your-id</a></dd>
+      <dt>소속</dt><dd>한양대학교 인공지능학과 석사과정</dd>
+    </dl>
+  </header>
+
+  <ul class="highlights">
+    <li><strong>WSDM 2027 제1저자 투고</strong><span>PIVOT: Dual-View POI Semantic IDs · 심사 중</span></li>
+    <li><strong>SCIE Q1 게재</strong><span>Human-centric Computing and Information Sciences · 제1저자</span></li>
+    <li><strong>한국연구재단 석사과정생 연구장려금</strong><span>Next-POI 추천 연구로 선정</span></li>
+    <li><strong>2023 KSC 논문경진대회 우수상</strong><span>학부생/주니어 부문</span></li>
+  </ul>
+
+  <h2 class="section">학력</h2>
+  <table class="plain">
+    <tr><td class="when">2025.03 – 현재</td><td>한양대학교 인공지능학과 석사과정</td><td class="note">재학</td></tr>
+    <tr><td class="when">2018.03 – 2024.02</td><td>경북대학교 전자공학 전공 · 컴퓨터학 부전공</td><td class="note">졸업</td></tr>
+  </table>
+
+  <h2 class="section">논문</h2>
+  <table class="plain">
+    <tr><td class="when">심사 중</td><td>PIVOT: Dual-View POI Semantic IDs with Vocabulary-Only Tuning for Generative Next-POI Recommendation</td><td class="note">WSDM 2027 · 제1저자</td></tr>
+    <tr><td class="when">2026</td><td>Next-POI 추천 관련 연구</td><td class="note">한국정보과학회 2026 · 제1저자</td></tr>
+    <tr><td class="when">2025.02</td><td>Improved Deep Learning Structure with Lightweight Depth-wise Convolutions for Human Activity Recognition</td><td class="note">Human-centric Computing and Information Sciences (SCIE Q1) · 제1저자</td></tr>
+    <tr><td class="when">2023.12</td><td>안드로이드 환경에서의 인간행동분류를 위한 CNN 딥러닝 모델 개선</td><td class="note">한국정보과학회 KSC 2023 · 제1저자 · 우수상</td></tr>
+  </table>
+
+  <h2 class="section">어학</h2>
+  <table class="plain">
+    <tr><td class="when">영어</td><td>TOEIC 870</td><td class="note">ETS</td></tr>
+  </table>
+
+  <h2 class="section">연구 및 프로젝트 경력</h2>
+
+  <!-- 1 -->
+  <article class="entry">
+    <aside class="meta">
+      <span class="period">2025.03 – 현재</span>
+      <span class="role">제1저자 · 연구 주도</span>
+      <span class="tag">LLM · Generative Recommendation</span>
+    </aside>
+    <div class="body">
+      <h3>LLM 기반 사용자 방문기록 분석 및 다음 방문지(POI) 추천 시스템 연구</h3>
+      <p>석사 과정에서 사용자의 방문기록(Trajectory) 데이터로 다음 방문지를 예측하는 LLM 기반 Generative Recommendation을 연구하고 있습니다. 기존 Semantic ID 기반 추천은 POI의 제한적인 텍스트 정보만으로 실제 이동·방문 패턴을 충분히 표현하기 어렵습니다. 이 문제를 풀기 위해 LLM의 텍스트 정보와 User-POI Graph의 사용자 행동 정보를 함께 활용하는 추천 모델을 설계했습니다.</p>
+      <p class="pub"><em>PIVOT: Dual-View POI Semantic IDs with Vocabulary-Only Tuning for Generative Next-POI Recommendation</em> — 제1저자, WSDM 2027 투고(심사 중). 관련 결과를 한국정보과학회 2026에 제1저자 논문으로 게재. 본 연구로 한국연구재단 「석사과정생 연구장려금」 지원 대상 선정.</p>
+
+      <h4>수행 내용</h4>
+      <ul>
+        <li><b>Dual-View Semantic ID 구조 개발</b> — LLM 기반 Text Embedding과 User-POI Graph에서 LightGCN으로 학습한 Collaborative Filtering Embedding을 각각 RQ-VAE로 양자화하여, POI의 의미 정보와 실제 방문 패턴을 함께 표현.</li>
+        <li><b>Vocabulary-Only Tuning</b> — 새로 만든 Semantic ID Token을 LLM에 학습시킬 때 LoRA 대신 Backbone을 고정하고 SID Embedding과 Output Parameter만 학습하는 방식을 설계. 방문기록 전체 SID에 학습 신호를 주는 Trajectory-wide SID Loss를 함께 개발.</li>
+        <li><b>모델 평가</b> — NYC, TKY, CA 실제 사용자 방문 데이터셋에서 Graph 기반, Sequential Recommendation, LLM 기반 Next-POI 추천 모델과 성능 비교·분석.</li>
+      </ul>
+      <h4>결과</h4>
+      <ul>
+        <li class="result">3개 데이터셋 모두에서 기존 SOTA 모델을 상회하는 추천 성능 달성.</li>
+        <li class="result">Vocabulary-Only Tuning으로 LoRA 대비 학습 Parameter 약 1/4 수준으로 절감, 생성 속도 약 2.2배 향상.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- 2 -->
+  <article class="entry">
+    <aside class="meta">
+      <span class="period">2023.02 – 2024.02</span>
+      <span class="role">제1저자 · 단독 수행</span>
+      <span class="tag">경량 딥러닝 · Edge / IoT</span>
+    </aside>
+    <div class="body">
+      <h3>임베디드/Edge 환경 경량 딥러닝 모델 개발 — IMU 센서 기반 행동 인식</h3>
+      <p>학부 4학년 기간, 자이로/가속도(IMU) 센서 데이터로 인간 행동을 분류하는 문제를 다뤘습니다. 컴퓨터 자원이 제한적인 IoT 환경에 맞는 딥러닝 모델을 만들기 위해 모델 구조 개선과 경량화를 주제로 연구했습니다.</p>
+      <p class="pub"><em>Improved Deep Learning Structure with Lightweight Depth-wise Convolutions for Human Activity Recognition</em> — 제1저자, Human-centric Computing and Information Sciences (SCIE Q1) 게재. 2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상.</p>
+
+      <h4>수행 내용</h4>
+      <ul>
+        <li><b>모델 경량화</b> — 기존 SOTA인 ResNet-SE 모델에 Depth-wise Convolution을 적용해 구조를 경량화.</li>
+        <li><b>센서 데이터 수집 및 처리</b> — Public 데이터 외에 실제 사용자를 대상으로 실험을 진행하여 IMU 센서 데이터를 직접 수집·처리.</li>
+        <li><b>온디바이스 평가</b> — 이전 논문 모델들과 Public 데이터에서 정확도를 비교하고, TF-Lite로 Android와 Raspberry Pi(Linux)에 배포하여 실제 기기에서 성능 비교.</li>
+      </ul>
+      <h4>결과</h4>
+      <ul>
+        <li class="result">Convolution을 Depth-wise Convolution으로 대체해 Parameter와 FLOPs를 줄이고 overfitting을 완화하여 정확도 향상.</li>
+        <li class="result">Inference time, CPU 사용량, 에너지 소비 모두에서 기존 모델보다 효율적인 모델 개발.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- 3 -->
+  <article class="entry">
+    <aside class="meta">
+      <span class="period">2025.03 – 현재</span>
+      <span class="role">데이터 파이프라인 개발 담당</span>
+      <span class="tag">LG전자 산학협력</span>
+    </aside>
+    <div class="body">
+      <h3>실시간 뉴스 트렌드 추출 기반 콘텐츠 추천 시스템 개발</h3>
+      <ul>
+        <li>RSS 기반 뉴스 실시간 수집 시스템 개발 — 외부 소스 연동, 갱신 주기 및 예외 처리 설계.</li>
+        <li>위키피디아 기반 영화 메타데이터 실시간 파싱 시스템 개발.</li>
+        <li>뉴스 텍스트 기반 트렌드 키워드 추출 및 추천 시스템 연계 방안 연구 참여.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- 4 -->
+  <article class="entry">
+    <aside class="meta">
+      <span class="period">2023.09 – 2024.02</span>
+      <span class="role">연구원</span>
+      <span class="tag">한국연구재단 과제</span>
+    </aside>
+    <div class="body">
+      <h3>영상 기반 위험 행동 탐지 연구</h3>
+      <p>과제명: 생활안전을 위한 멀티 센서데이터 분석 기반 상황인지 위험 탐지 및 위험 상황 공유 연구</p>
+      <ul>
+        <li>감시 카메라 영상 기반 인간 행동 분류·예측을 통한 위험 상황(위험물체 접근) 탐지.</li>
+        <li>Skeleton 기반 행동인식 모델(OpenPose, AlphaPose)을 직접 수집한 데이터로 fine-tuning.</li>
+      </ul>
+    </div>
+  </article>
+
+  <footer>
+    <span>경험 및 경력기술서</span>
+    <span>최종 수정 2026.09</span>
+  </footer>
+</div>
+</body>
+</html>
