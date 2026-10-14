@@ -324,7 +324,7 @@
       <span class="tag">경량 딥러닝 · Edge / IoT</span>
     </aside>
     <div class="body">
-      <h3>임베디드/Edge 환경 경량 딥러닝 모델 개발 — IMU 센서 기반 행동 인식</h3>
+      <h3>임베디드/Edge 환경 경량 딥러닝 모델 개발(연산량(FLOPs) 73.6% 경량화) — IMU 센서 기반 행동 인식</h3>
       <p>학부 4학년 기간, 자이로/가속도(IMU) 센서 데이터로 인간 행동을 분류하는 문제를 다뤘습니다. 컴퓨터 자원이 제한적인 IoT·Edge 환경에 맞는 딥러닝 모델을 만들기 위해 모델 구조 개선과 경량화를 연구했으며, 모델 개선에 그치지 않고 데이터 수집 장치 구축부터 온디바이스 배포·측정까지 실험 환경 전체를 직접 만들었습니다.</p>
       <p class="pub"><em>Improved Deep Learning Structure with Lightweight Depth-wise Convolutions for Human Activity Recognition</em> — 제1저자, Human-centric Computing and Information Sciences (SCIE Q1) 게재. 2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상.</p>
 
@@ -337,12 +337,17 @@
       </ul>
       <h4>결과</h4>
       <ul>
-        <li class="result">Depth-wise Convolution 적용으로 Parameter와 FLOPs를 줄이면서 정확도 향상.</li>
-        <li class="result">추론시간, CPU 사용량, 에너지 소비 모두에서 기존 모델 대비 개선.</li>
+        <li class="result"><b>연산량(FLOPs) 73.6% 절감</b>(42.75M → 11.26M) 및 <b>파라미터 56% 감소</b>(138K → 61K), 3개 공개 데이터셋(WISDM, UCI-HAR, PAMAP2) SOTA 달성(UCI-HAR 정확도 <b>99.7%</b>).</li>
+        <li class="result">직접 수집한 <b>실환경(Unseen) 데이터에서 정확도 +4.0%p 향상(93.8% → 97.8%, F1 0.979) 및 추론 속도 4.4배 가속</b> — 경량화가 소규모·실환경 데이터의 일반화 성능을 높임을 실증.</li>
+        <li class="result">Raspberry Pi 4 실기기에서 <b>추론 시간 64.7% 단축(2.8배 가속, 5.08s → 1.79s) 및 소비 전력 12.5% 절감</b>, Android 환경에서 <b>추론 시간 38.6% 단축</b>(6.82s → 4.19s).</li>
       </ul>
     </div>
   </article>
+  
 
+
+
+  
   <!-- 3 -->
   <article class="entry">
     <aside class="meta">
