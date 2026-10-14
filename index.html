@@ -217,25 +217,25 @@
   <header class="hero">
     <div>
       <h1>장승우 <span class="en">Seung Woo Jang</span></h1>
-      <p class="lead">LLM 기반 추천 시스템과 경량 딥러닝 모델을 연구합니다. 텍스트 정보와 사용자 행동 그래프를 함께 다루는 Generative Recommendation이 현재의 주요 연구 주제입니다.</p>
-       <ul class="skills" aria-label="주요 역량">
-        <li class="core">#LLM</li>
+      <p class="lead">사용자 행동 그래프(CF)와 LLM을 결합하는 <b>Generative Recommendation</b>을 연구합니다. <b>Unseen/Cold-start 일반화</b>부터 <b>실시간 데이터 파이프라인 구축</b>, <b>모델 경량화 및 서빙 최적화</b>까지 실제 서비스 환경에서 동작하는 추천 시스템을 지향합니다.</p>
+      <ul class="skills" aria-label="주요 역량">
         <li class="core">#Generative Recommendation</li>
-        <li class="core">#경량화 · On-device AI</li>
+        <li class="core">#Dual-View Semantic ID (RQ-VAE)</li>
+        <li class="core">#Graph RecSys (LightGCN)</li>
+        <li class="core">#LLM 서빙 최적화 · 경량화</li>
+        <li>#실시간 데이터 파이프라인</li>
         <li>#PyTorch</li>
+        <li>#PEFT (LoRA)</li>
         <li>#TensorFlow · TF-Lite</li>
         <li>#Python</li>
-        <li>#Embedded C · Raspberry Pi</li>
-        <li>#Semantic ID</li>
-        <li>#Graph</li>
-        <li>#PEFT(LoRA)</li>
+        <li>#C · On-Device AI</li>
         <li>#Docker</li>
       </ul>
     </div>
     <dl class="contact">
       <dt>이메일</dt><dd><a href="mailto:su980818@naver.com">su980818@naver.com</a></dd>
       <dt>GitHub</dt><dd><a href="https://github.com/su980818">github.com/su980818</a></dd>
-      <dt>소속</dt><dd>한양대학교 인공지능학과 석사과정 · Data Intelligence Lab</dd>
+      <dt>소속</dt><dd>한양대학교 인공지능학과 석사과정 · Data Intelligence Lab (2027.02 졸업예정)</dd>
     </dl>
   </header>
 
@@ -245,8 +245,8 @@
     <li><strong>한국연구재단 석사과정생 연구장려금</strong><span>다음 방문지 추천 연구로 선정</span></li>
     <li><strong>2023 KSC 논문경진대회 우수상</strong><span>학부생/주니어 부문</span></li>
   </ul>
-
-
+  
+  
   <!-- 
   <h2 class="section">학력</h2>
   <table class="plain">
@@ -259,10 +259,12 @@
   <table class="plain">
     <tr><td class="when">심사 중</td><td>PIVOT: Dual-View POI Semantic IDs with Vocabulary-Only Tuning for Generative Next-POI Recommendation</td><td class="note">WSDM 2027 · 제1저자</td></tr>
     <tr><td class="when">2026.06</td><td>거대 언어모델 기반의 다음 방문지 추천을 위한 속성 분리형 시맨틱 ID 기법</td><td class="note">한국정보과학회 2026 한국컴퓨터종합학술대회 논문집 · 제1저자</td></tr>
-    <tr><td class="when">2025.02</td><td>Improved Deep Learning Structure with Lightweight Depth-wise Convolutions for Human Activity Recognition</td><td class="note">Human-centric Computing and Information Sciences (SCIE Q1) · 제1저자</td></tr>
+    <tr><td class="when">2025.04</td><td><a href="https://doi.org/10.22967/HCIS.2025.15.020" target="_blank">Improved Deep Learning Structure with Lightweight Depthwise Convolutions for Human Activity Recognition</a></td><td class="note">Human-centric Computing and Information Sciences (SCIE Q1) · 제1저자</td></tr>
     <tr><td class="when">2023.12</td><td>안드로이드 환경에서의 인간행동분류를 위한 CNN 딥러닝 모델 개선</td><td class="note">한국정보과학회 2023 한국소프트웨어종합학술대회 논문집 · 제1저자 · 우수상</td></tr>
   </table>
 
+
+  
     <h2 class="section">프로젝트</h2>
   <table class="plain">
     <tr><td class="when">2026.01 – 2027.01</td><td>실시간 이벤트 기반 미디어 콘텐츠 추천 기술 개발</td><td class="note">LG전자 산학협력 · 데이터 파이프라인 개발</td></tr>
@@ -304,11 +306,16 @@
       <ul>
         <li class="result">3개 데이터셋 모두에서 기존 SOTA 모델을 상회하는 추천 성능 달성.</li>
         <li class="result">프롬프트에 없는 POI를 예측하는 경우 LoRA 대비 정확도 최대 3배 향상 — SID가 LLM 표현 공간에 정렬되었음을 확인.</li>
-        <li class="result">LoRA 대비 학습 Parameter 약 1/4 수준, GPU memory 41% 감소, 생성 속도 약 2.2배 향상.</li>
+        <li class="result"><b>학습 Parameter 약 1/4 축소, GPU 메모리 41% 절감, 추론 생성 속도 약 2.2배 향상</b>으로 대규모 트래픽 환경의 실시간 서빙 효율성 확보.</li>
       </ul>
     </div>
   </article>
 
+  
+
+
+
+  
   <!-- 2 -->
   <article class="entry">
     <aside class="meta">
