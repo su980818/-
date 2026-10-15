@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0065)file:///C:/Users/su980/Downloads/%EC%9D%B4%EB%A0%A5%EC%84%9C.html -->
-<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>장승우 — 이력서</title>
 <meta name="description" content="장승우 이력서 · LLM 기반 Generative Recommendation, Semantic ID, 경량 딥러닝 모델 연구">
-<link rel="stylesheet" as="style" crossorigin="" href="./장승우 — 이력서_files/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
   :root{
     --paper:#F2F4F7;
@@ -79,6 +79,7 @@
   }
   .skills li.core{background:var(--teal);color:#fff}
   .contact{
+    align-self:end;
     margin:0;
     font-size:15px;
     color:var(--ink-2);
@@ -89,22 +90,6 @@
   }
   .contact dt{color:var(--ink-3);margin:0}
   .contact dd{margin:0}
-  .side{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    gap:20px;
-  }
-  .photo{
-    display:block;
-    width:120px;
-    aspect-ratio:3/4;
-    object-fit:cover;
-    border-radius:4px;
-    border:1px solid var(--rule);
-    background:var(--sheet);
-  }
-  @media (max-width:819px){.photo{width:100px}}
 
   /* ---------- 핵심 성과 요약 ---------- */
   .highlights{
@@ -266,33 +251,23 @@
       <h1>장승우 <span class="en">SeungWoo Jang</span></h1>
       <p class="lead">User-Item Graph와 LLM을 결합하는 <b>개인화 Generative Recommendation</b>을 연구합니다. <b>Unseen/Cold-start 일반화</b>부터 <b>실시간 데이터 파이프라인 구축</b>, <b>모델 경량화 및 최적화</b>까지 실제 서비스 환경에서 동작하는 추천 시스템을 지향합니다.</p>
       <ul class="skills" aria-label="주요 역량">
-        
-<li class="core">#LLM RecSys</li>
-        
+        <li class="core">#LLM RecSys</li>
         <li class="core">#Graph RecSys</li>
-        <li class="core">#Explainable RecSys</li><li class="core">#PEFT (Soft-Prompting, LoRA)</li>
+        <li class="core">#Explainable RecSys</li>
+        <li class="core">#PEFT (Soft-Prompting, LoRA)</li>
         <li class="core">#센서 데이터 CNN</li>
         <li class="core">#On-device AI 경량화</li>
-        
-        
-<li>#PyTorch</li>
+        <li>#PyTorch</li>
         <li>#TensorFlow · TF-Lite</li>
-        
         <li>#Python</li>
         <li>#C</li>
         <li>#Docker · Conda</li>
       </ul>
     </div>
-    <div class="side">
-      <img class="photo" src="file:///C:/Users/su980/Downloads/img/profile.jpg" alt="장승우 증명사진"><!-- 블라인드 채용 제출 시 이 줄 주석 처리 -->
-      <dl class="contact">
-        <dt>이메일</dt><dd><a href="mailto:su980818@naver.com">su980818@naver.com</a></dd>
-        <dt>소속</dt><dd>한양대학교 인공지능학과 석사과정 · Data Intelligence Lab (2027.02 졸업예정)</dd>
-        <!-- TODO: 병역 기입 후 주석 해제
-        <dt>병역</dt><dd>군필 (20XX.XX – 20XX.XX)</dd>
-        -->
-      </dl>
-    </div>
+    <dl class="contact">
+      <dt>이메일</dt><dd><a href="mailto:su980818@naver.com">su980818@naver.com</a></dd>
+      <dt>소속</dt><dd>한양대학교 인공지능학과 석사과정 · Data Intelligence Lab (2027.02 졸업예정)</dd>
+    </dl>
   </header>
 
   <ul class="highlights">
@@ -304,17 +279,19 @@
 
   <h2 class="section">학력</h2>
   <table class="plain">
-    <tbody><tr>
+    <tbody>
+    <tr>
       <td class="when">2025.03 – 2027.02</td>
       <td>한양대학교 인공지능학과 석사과정<span class="sub">Data Intelligence Lab 석사연구생 (지도교수 채동규)</span></td>
-      <td class="note">졸업예정</td><!-- TODO: 학점 기입 시 "학점 X.XX / 4.5" -->
+      <td class="note">졸업예정</td>
     </tr>
     <tr>
       <td class="when">2018.03 – 2024.02</td>
       <td>경북대학교 전자공학 전공 · 컴퓨터학 부전공<span class="sub">IT Convergence and Security Lab 학부연구생 (지도교수 정임영)</span></td>
       <td class="note">졸업</td>
     </tr>
-  </tbody></table>
+    </tbody>
+  </table>
 
   <h2 class="section">논문</h2>
   <table class="papers">
@@ -351,33 +328,37 @@
 
   <h2 class="section">프로젝트 경험</h2>
   <table class="plain">
-    <tbody><tr>
+    <tbody>
+    <tr>
       <td class="when">2026.01 – 2027.01</td>
-      <td>실시간 이벤트 기반 미디어 콘텐츠 추천</a><span class="sub">RSS 뉴스 실시간 수집 · 위키피디아 메타데이터 파싱 파이프라인</span></td>
+      <td>실시간 이벤트 기반 미디어 콘텐츠 추천<span class="sub">RSS 뉴스 실시간 수집 · 위키피디아 메타데이터 파싱 파이프라인</span></td>
       <td class="note">LG전자 산학협력 · 연구자(파이프라인 개발)</td>
     </tr>
     <tr>
       <td class="when">진행 중</td>
-      <td>e-commerce 설명가능 추천 연구</a><span class="sub">AOS 기반 Aspect를 추천 근거로 활용한 LLM기반 생성형 추천 연구</span></td>
+      <td>e-commerce 설명가능 추천 연구<span class="sub">AOS 기반 Aspect를 추천 근거로 활용한 LLM기반 생성형 추천 연구</span></td>
       <td class="note">현재 연구 진행</td>
     </tr>
     <tr>
       <td class="when">2023.09 – 2024.02</td>
-      <td>감시카메라 영상 기반 위험 행동 탐지 연구</a><span class="sub">위험 시나리오 데이터 직접 구축 · AlphaPose 파인튜닝</span></td>
+      <td>감시카메라 영상 기반 위험 행동 탐지 연구<span class="sub">위험 시나리오 데이터 직접 구축 · AlphaPose 파인튜닝</span></td>
       <td class="note">한국연구재단 과제 · 학생연구자</td>
     </tr>
     <tr>
       <td class="when">2023.09 – 2023.12</td>
-      <td>자율 시스템 교과목, 자율주행 자동차 개발</a><span class="sub">카메라 경로 인식 · PID 조향 제어</span></td>
+      <td>자율 시스템 교과목, 자율주행 자동차 개발<span class="sub">카메라 경로 인식 · PID 조향 제어</span></td>
       <td class="note">팀 리더 · 최종 1위</td>
     </tr>
-  </tbody></table>
+    </tbody>
+  </table>
 
   <h2 class="section">수상 및 장학</h2>
   <table class="plain">
-    <tbody><tr><td class="when">2025.08</td><td>한국연구재단 「석사과정생 연구장려금」 선정</td><td class="note">LLM 기반, 다음 방문지, 생성형 추천 연구로 선정</td></tr><!-- TODO: 선정 연월 -->
+    <tbody>
+    <tr><td class="when">2025.08</td><td>한국연구재단 「석사과정생 연구장려금」 선정</td><td class="note">LLM 기반, 다음 방문지, 생성형 추천 연구로 선정</td></tr>
     <tr><td class="when">2023.12</td><td>2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상</td><td class="note">센서 기반, 행동 인식, On-device, CNN 모델 경량화 연구로 선정</td></tr>
-  </tbody></table>
+    </tbody>
+  </table>
 
   <h2 class="section">프로젝트 상세</h2>
 
@@ -437,7 +418,6 @@
     <div class="body">
       <h3>설명가능 추천(Explainable Recommendation) 연구</h3>
       <p>AOS를 활용해 추출한 Aspect를 추천의 설명으로 가정하고, 추천 결과와 함께 근거를 제시하는 설명가능 추천 시스템을 연구하고 있습니다.</p>
-      <!-- TODO: 연구 시작 시점, 데이터셋, 현재 진척도 한 줄씩 추가 -->
     </div>
   </article>
 
@@ -449,7 +429,7 @@
       <span class="tag">경량 딥러닝 · Edge / IoT</span>
     </aside>
     <div class="body">
-      <h3>Edge 환경 경량 딥러닝 모델 개발 — IMU 센서 기반 행동 인식</h3>
+      <h3>Edge 환경 E2E 행동 인식 시스템 — 센서 수집 · 모델 경량화 · 온디바이스 배포</h3>
       <p>자이로·가속도(IMU) 센서로 인간 행동을 분류하는 모델을 자원이 제한된 Edge 기기에서 동작하도록 경량화했습니다. 모델 개선에 그치지 않고 데이터 수집 장치 구축부터 온디바이스 배포·측정까지 실험 환경 전체를 직접 만들었습니다.</p>
       <p class="pub"><em>Improved Deep Learning Structure with Lightweight Depthwise Convolutions for Human Activity Recognition</em> — 제1저자, Human-centric Computing and Information Sciences (SCIE Q1) 게재. 2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상.</p>
       <h4>수행 내용</h4>
@@ -503,19 +483,23 @@
 
   <h2 class="section">교육 및 대외활동</h2>
   <table class="plain">
-    <tbody><tr><td class="when">2025.03 – 현재</td><td>「공학도를 위한 창의적 컴퓨팅」 Python 실습 조교<span class="sub">3개 학기 실습 직접 진행 · 학생들이 막히는 지점을 관찰해 진행 순서 조정</span></td><td class="note">한양대학교</td></tr>
+    <tbody>
+    <tr><td class="when">2025.03 – 현재</td><td>「공학도를 위한 창의적 컴퓨팅」 Python 실습 조교<span class="sub">3개 학기 실습 직접 진행 · 학생들이 막히는 지점을 관찰해 진행 순서 조정</span></td><td class="note">한양대학교</td></tr>
     <tr><td class="when">2025.03 – 2025.06</td><td>「Algorithmic, Computational, and Data Thinking」 수업 조교<span class="sub">전 과정 영어 진행 · 토론 지도, Python Lab 및 온라인 튜터링</span></td><td class="note">한양대학교</td></tr>
     <tr><td class="when">2025.03 – 2025.07</td><td>영어회화 동아리<span class="sub">기술·사회 이슈 주제 영어 토론</span></td><td class="note">한양대학교</td></tr>
-  </tbody></table>
+    </tbody>
+  </table>
 
   <h2 class="section">어학</h2>
   <table class="plain">
-    <tbody><tr><td class="when">영어</td><td>OPIc Intermediate Mid 2 (IM2)</td><td class="note">ACTFL · 2026.09</td></tr>
-  </tbody></table>
+    <tbody>
+    <tr><td class="when">영어</td><td>OPIc Intermediate Mid 2 (IM2)</td><td class="note">ACTFL · 2026.09</td></tr>
+    </tbody>
+  </table>
 
   <footer>
     <span>최종 수정 2026.10</span>
   </footer>
 </div>
-
-</body></html>
+</body>
+</html>
