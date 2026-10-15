@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0065)file:///C:/Users/su980/Downloads/%EC%9D%B4%EB%A0%A5%EC%84%9C.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>장승우 — 포트폴리오</title>
-<meta name="description" content="LLM 기반 Generative Recommendation, Semantic ID, 경량 딥러닝 모델 연구 경력기술서">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<title>장승우 — 이력서</title>
+<meta name="description" content="장승우 이력서 · LLM 기반 Generative Recommendation, Semantic ID, 경량 딥러닝 모델 연구">
+<link rel="stylesheet" as="style" crossorigin="" href="./장승우 — 이력서_files/pretendardvariable-dynamic-subset.min.css">
 <style>
   :root{
     --paper:#F2F4F7;
@@ -59,7 +59,7 @@
     margin:0;
     max-width:36em;
   }
-    .skills{
+  .skills{
     list-style:none;
     margin:20px 0 0;
     padding:0;
@@ -79,7 +79,7 @@
   }
   .skills li.core{background:var(--teal);color:#fff}
   .contact{
-    align-self:end;
+    margin:0;
     font-size:15px;
     color:var(--ink-2);
     display:grid;
@@ -89,6 +89,22 @@
   }
   .contact dt{color:var(--ink-3);margin:0}
   .contact dd{margin:0}
+  .side{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .photo{
+    display:block;
+    width:120px;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    border-radius:4px;
+    border:1px solid var(--rule);
+    background:var(--sheet);
+  }
+  @media (max-width:819px){.photo{width:100px}}
 
   /* ---------- 핵심 성과 요약 ---------- */
   .highlights{
@@ -108,7 +124,7 @@
   .highlights strong{display:block;font-size:17px;font-weight:700;margin-bottom:4px}
   .highlights span{color:var(--ink-2);font-size:14.5px}
 
-  /* ---------- 경력 항목 ---------- */
+  /* ---------- 섹션 / 상세 항목 ---------- */
   h2.section{
     font-size:14px;
     font-weight:600;
@@ -178,17 +194,47 @@
   .body li.result::before{background:var(--teal)}
   .body li.result{color:var(--ink)}
 
+  /* ---------- 일반 표 ---------- */
   table.plain{width:100%;border-collapse:collapse;font-size:15.5px}
   table.plain td{padding:10px 0;border-top:1px solid var(--rule);vertical-align:top}
   table.plain tr:first-child td{border-top:0}
   table.plain td.when{width:150px;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;padding-right:16px;white-space:nowrap}
   table.plain td.note{width:32%;color:var(--ink-2);padding-left:24px;text-align:right}
+  table.plain td .sub{display:block;color:var(--ink-2);font-size:14px}
   @media (max-width:640px){
     table.plain,table.plain tr,table.plain td{display:block;width:auto}
     table.plain td{border-top:0;padding:2px 0}
     table.plain tr{border-top:1px solid var(--rule);padding:10px 0}
     table.plain td.note{text-align:left;padding-left:0;font-size:14px}
   }
+
+  /* ---------- 논문 표 ---------- */
+  table.papers{width:100%;border-collapse:collapse;font-size:15px}
+  table.papers th{
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink-3);
+    text-align:left;
+    padding:0 20px 8px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  table.papers th:last-child{text-align:right;padding-right:0}
+  table.papers td{padding:12px 20px 12px 0;border-top:1px solid var(--rule);vertical-align:top}
+  table.papers tbody tr:first-child td{border-top:0}
+  table.papers td.when{width:96px;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+  table.papers td.title{width:40%;color:var(--ink);font-weight:500;line-height:1.55}
+  table.papers td.title .venue{display:block;margin-top:4px;color:var(--ink-3);font-size:13.5px;font-weight:400}
+  table.papers td.desc{color:var(--ink-2);font-size:14.5px;line-height:1.6}
+  table.papers td.author{width:76px;padding-right:0;text-align:right;white-space:nowrap;color:var(--teal);font-weight:600;font-size:14px}
+  @media (max-width:640px){
+    table.papers thead{display:none}
+    table.papers,table.papers tbody,table.papers tr,table.papers td{display:block;width:auto}
+    table.papers td{border-top:0;padding:2px 0}
+    table.papers tr{border-top:1px solid var(--rule);padding:12px 0}
+    table.papers tbody tr:first-child{border-top:0}
+    table.papers td.author{text-align:left}
+  }
+
   footer{
     margin-top:64px;
     padding-top:20px;
@@ -207,6 +253,7 @@
     .hero h1{font-size:30px}
     article.entry{padding:18px 0;break-inside:avoid}
     .body p.pub{background:none;padding-left:12px}
+    table.papers tr{break-inside:avoid}
     footer{display:none}
   }
 </style>
@@ -216,181 +263,259 @@
 
   <header class="hero">
     <div>
-      <h1>장승우 <span class="en">Seung Woo Jang</span></h1>
-      <p class="lead">사용자 행동 그래프(CF)와 LLM을 결합하는 <b>Generative Recommendation</b>을 연구합니다. <b>Unseen/Cold-start 일반화</b>부터 <b>실시간 데이터 파이프라인 구축</b>, <b>모델 경량화 및 서빙 최적화</b>까지 실제 서비스 환경에서 동작하는 추천 시스템을 지향합니다.</p>
+      <h1>장승우 <span class="en">SeungWoo Jang</span></h1>
+      <p class="lead">User-Item Graph와 LLM을 결합하는 <b>개인화 Generative Recommendation</b>을 연구합니다. <b>Unseen/Cold-start 일반화</b>부터 <b>실시간 데이터 파이프라인 구축</b>, <b>모델 경량화 및 최적화</b>까지 실제 서비스 환경에서 동작하는 추천 시스템을 지향합니다.</p>
       <ul class="skills" aria-label="주요 역량">
-        <li class="core">#Generative Recommendation</li>
-        <li class="core">#Semantic ID</li>
+        
+<li class="core">#LLM RecSys</li>
+        
         <li class="core">#Graph RecSys</li>
-        <li class="core">#LLM 경량화</li>
+        <li class="core">#Explainable RecSys</li><li class="core">#PEFT (Soft-Prompting, LoRA)</li>
         <li class="core">#센서 데이터 CNN</li>
         <li class="core">#On-device AI 경량화</li>
-        <li>#실시간 데이터 파이프라인</li>
-        <li>#PyTorch</li>
-        <li>#PEFT (LoRA)</li>
+        
+        
+<li>#PyTorch</li>
         <li>#TensorFlow · TF-Lite</li>
+        
         <li>#Python</li>
-        <li>#C · On-Device AI</li>
-        <li>#Docker</li>
+        <li>#C</li>
+        <li>#Docker · Conda</li>
       </ul>
     </div>
-    <dl class="contact">
-      <dt>이메일</dt><dd><a href="mailto:su980818@naver.com">su980818@naver.com</a></dd>
-      <dt>GitHub</dt><dd><a href="https://github.com/su980818">github.com/su980818</a></dd>
-      <dt>소속</dt><dd>한양대학교 인공지능학과 석사과정 · Data Intelligence Lab (2027.02 졸업예정)</dd>
-    </dl>
+    <div class="side">
+      <img class="photo" src="file:///C:/Users/su980/Downloads/img/profile.jpg" alt="장승우 증명사진"><!-- 블라인드 채용 제출 시 이 줄 주석 처리 -->
+      <dl class="contact">
+        <dt>이메일</dt><dd><a href="mailto:su980818@naver.com">su980818@naver.com</a></dd>
+        <dt>소속</dt><dd>한양대학교 인공지능학과 석사과정 · Data Intelligence Lab (2027.02 졸업예정)</dd>
+        <!-- TODO: 병역 기입 후 주석 해제
+        <dt>병역</dt><dd>군필 (20XX.XX – 20XX.XX)</dd>
+        -->
+      </dl>
+    </div>
   </header>
 
   <ul class="highlights">
-    <li><strong>WSDM 2027 제1저자 투고</strong><span>LLM기반 다음 방문지 추천 연구</span></li>
-    <li><strong>SCIE Q1 제1저자 게재</strong><span>센서기반 인간 행동 분류 딥러닝 모델 연구</span></li>
-    <li><strong>한국연구재단 석사과정생 연구장려금</strong><span>다음 방문지 추천 연구로 선정</span></li>
-    <li><strong>2023 KSC 논문경진대회 우수상</strong><span>학부생/주니어 부문</span></li>
+    <li><strong>WSDM 2027 제1저자 투고</strong><span>LLM 기반, 다음 방문지, 생성형 추천 연구(심사 중)</span></li>
+    <li><strong>SCIE Q1 제1저자 게재</strong><span>센서 기반, 행동 인식, On-device, CNN 모델 경량화 연구</span></li>
+    <li><strong>한국연구재단 석사과정생 연구장려금</strong><span>LLM 기반, 다음 방문지, 생성형 추천 연구로 선정</span></li>
+    <li><strong>2023 KSC 논문경진대회 우수상</strong><span>센서 기반, 행동 인식, On-device, CNN 모델 경량화 연구로 선정</span></li>
   </ul>
-  
-  
-  <!-- 
+
   <h2 class="section">학력</h2>
   <table class="plain">
-    <tr><td class="when">2025.03 – 현재</td><td>한양대학교 인공지능학과 석사과정</td><td class="note">2027.02 졸업예정</td></tr>
-    <tr><td class="when">2018.03 – 2024.02</td><td>경북대학교 전자공학 전공 · 컴퓨터학 부전공</td><td class="note">졸업</td></tr>
-  </table>
-  -->
-  
+    <tbody><tr>
+      <td class="when">2025.03 – 2027.02</td>
+      <td>한양대학교 인공지능학과 석사과정<span class="sub">Data Intelligence Lab 석사연구생 (지도교수 채동규)</span></td>
+      <td class="note">졸업예정</td><!-- TODO: 학점 기입 시 "학점 X.XX / 4.5" -->
+    </tr>
+    <tr>
+      <td class="when">2018.03 – 2024.02</td>
+      <td>경북대학교 전자공학 전공 · 컴퓨터학 부전공<span class="sub">IT Convergence and Security Lab 학부연구생 (지도교수 정임영)</span></td>
+      <td class="note">졸업</td>
+    </tr>
+  </tbody></table>
+
   <h2 class="section">논문</h2>
-  <table class="plain">
-    <tr><td class="when">심사 중</td><td>PIVOT: Dual-View POI Semantic IDs with Vocabulary-Only Tuning for Generative Next-POI Recommendation</td><td class="note">WSDM 2027 · 제1저자</td></tr>
-    <tr><td class="when">2026.06</td><td>거대 언어모델 기반의 다음 방문지 추천을 위한 속성 분리형 시맨틱 ID 기법</td><td class="note">한국정보과학회 2026 한국컴퓨터종합학술대회 논문집 · 제1저자</td></tr>
-    <tr><td class="when">2025.04</td><td><a href="https://doi.org/10.22967/HCIS.2025.15.020" target="_blank">Improved Deep Learning Structure with Lightweight Depthwise Convolutions for Human Activity Recognition</a></td><td class="note">Human-centric Computing and Information Sciences (SCIE Q1) · 제1저자</td></tr>
-    <tr><td class="when">2023.12</td><td>안드로이드 환경에서의 인간행동분류를 위한 CNN 딥러닝 모델 개선</td><td class="note">한국정보과학회 2023 한국소프트웨어종합학술대회 논문집 · 제1저자 · 우수상</td></tr>
+  <table class="papers">
+    <thead>
+      <tr><th scope="col">시기</th><th scope="col">논문</th><th scope="col">내용</th><th scope="col">저자</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="when">심사 중</td>
+        <td class="title">PIVOT: Dual-View POI Semantic IDs with Vocabulary-Only Tuning for Generative Next-POI Recommendation<span class="venue">WSDM 2027</span></td>
+        <td class="desc">텍스트와 사용자 행동 그래프를 결합한 Semantic ID와 Backbone을 고정한 효율적인 튜닝으로 생성형 Next-POI 추천 SOTA 달성 및 LoRA 대비 GPU 메모리 41% 절감</td>
+        <td class="author">제1저자</td>
+      </tr>
+      <tr>
+        <td class="when">2026.06</td>
+        <td class="title">거대 언어모델 기반의 다음 방문지 추천을 위한 속성 분리형 시맨틱 ID 기법<span class="venue">한국정보과학회 2026 한국컴퓨터종합학술대회</span></td>
+        <td class="desc">(PIVOT 관련 연구)</td>
+        <td class="author">제1저자</td>
+      </tr>
+      <tr>
+        <td class="when">2025.04</td>
+        <td class="title"><a href="https://doi.org/10.22967/HCIS.2025.15.020" target="_blank" rel="noopener">Improved Deep Learning Structure with Lightweight Depthwise Convolutions for Human Activity Recognition</a><span class="venue">HCIS (SCIE Q1)</span></td>
+        <td class="desc">Depthwise Convolution으로 행동 인식 모델을 경량화해 FLOPs 73.7% 절감, Raspberry Pi 및 Android환경에서 E2E 추론 모델 개발, 추론 2.8배 가속 및 실제 수집 데이터 정확도 향상</td>
+        <td class="author">제1저자</td>
+      </tr>
+      <tr>
+        <td class="when">2023.12</td>
+        <td class="title">안드로이드 환경에서의 인간행동분류를 위한 CNN 딥러닝 모델 개선<span class="venue">한국정보과학회 2023 한국소프트웨어종합학술대회 <br>학부생/주니어 논문경진대회 우수상</span></td>
+        <td class="desc">(Lightweight Depthwise Convolutions 관련 연구)</td>
+        <td class="author">제1저자</td>
+      </tr>
+    </tbody>
   </table>
 
-
-  
-    <h2 class="section">프로젝트</h2>
+  <h2 class="section">프로젝트 경험</h2>
   <table class="plain">
-    <tr><td class="when">2026.01 – 2027.01</td><td>실시간 이벤트 기반 미디어 콘텐츠 추천 기술 개발</td><td class="note">LG전자 산학협력 · 데이터 파이프라인 개발</td></tr>
-    <tr><td class="when">2023.09 – 2024.02</td><td>생활안전을 위한 IoT 멀티 센서데이터 분석 기반 상황인지 위험 탐지 및 위험 상황 공유 연구</td><td class="note">한국연구재단 과제 · 학생연구자</td></tr>
-  </table>
+    <tbody><tr>
+      <td class="when">2026.01 – 2027.01</td>
+      <td>실시간 이벤트 기반 미디어 콘텐츠 추천</a><span class="sub">RSS 뉴스 실시간 수집 · 위키피디아 메타데이터 파싱 파이프라인</span></td>
+      <td class="note">LG전자 산학협력 · 연구자(파이프라인 개발)</td>
+    </tr>
+    <tr>
+      <td class="when">진행 중</td>
+      <td>e-commerce 설명가능 추천 연구</a><span class="sub">AOS 기반 Aspect를 추천 근거로 활용한 LLM기반 생성형 추천 연구</span></td>
+      <td class="note">현재 연구 진행</td>
+    </tr>
+    <tr>
+      <td class="when">2023.09 – 2024.02</td>
+      <td>감시카메라 영상 기반 위험 행동 탐지 연구</a><span class="sub">위험 시나리오 데이터 직접 구축 · AlphaPose 파인튜닝</span></td>
+      <td class="note">한국연구재단 과제 · 학생연구자</td>
+    </tr>
+    <tr>
+      <td class="when">2023.09 – 2023.12</td>
+      <td>자율 시스템 교과목, 자율주행 자동차 개발</a><span class="sub">카메라 경로 인식 · PID 조향 제어</span></td>
+      <td class="note">팀 리더 · 최종 1위</td>
+    </tr>
+  </tbody></table>
 
-
-
-  
-  <!-- 
-  <h2 class="section">어학</h2>
+  <h2 class="section">수상 및 장학</h2>
   <table class="plain">
-    <tr><td class="when">영어</td><td>OPIc Intermediate Mid 2 (IM2)</td><td class="note">ACTFL · 2026.09</td></tr>
-  </table>
-  -->
-  
-  <h2 class="section">연구 및 프로젝트 경력</h2>
+    <tbody><tr><td class="when">2025.08</td><td>한국연구재단 「석사과정생 연구장려금」 선정</td><td class="note">LLM 기반, 다음 방문지, 생성형 추천 연구로 선정</td></tr><!-- TODO: 선정 연월 -->
+    <tr><td class="when">2023.12</td><td>2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상</td><td class="note">센서 기반, 행동 인식, On-device, CNN 모델 경량화 연구로 선정</td></tr>
+  </tbody></table>
 
-  <!-- 1 -->
-  <article class="entry">
+  <h2 class="section">프로젝트 상세</h2>
+
+  <!-- 1. PIVOT -->
+  <article class="entry" id="p-pivot">
     <aside class="meta">
       <span class="period">2025.03 – 현재</span>
       <span class="role">제1저자 · 연구 주도</span>
       <span class="tag">LLM · Generative Recommendation</span>
     </aside>
     <div class="body">
-      <h3>LLM 기반 사용자 방문기록 분석 및 다음 방문지(POI) 추천 시스템 연구</h3>
-      <p>사용자의 방문기록(Trajectory)으로 다음 방문지를 예측하는 LLM 기반 Generative Recommendation을 연구하고 있습니다. 기존 Semantic ID 기반 추천은 POI의 제한적인 텍스트 정보만으로 실제 이동·방문 패턴을 충분히 표현하기 어렵습니다. 이 문제를 풀기 위해 LLM의 텍스트 정보와 User-POI Graph의 사용자 행동 정보를 함께 활용하는 모델을 개발했으며, 문제 정의부터 선행 연구 조사, 실험 설계, 모델 구현, 3개 데이터셋 비교 실험, 논문 작성까지 전 과정을 맡았습니다.</p>
-      <p class="pub"><em>PIVOT: Dual-View POI Semantic IDs with Vocabulary-Only Tuning for Generative Next-POI Recommendation</em> — 제1저자, WSDM 2027 투고(심사 중). 관련 결과를 한국정보과학회 2026에 제1저자 논문으로 게재. 본 연구로 한국연구재단 「석사과정생 연구장려금」 지원 대상 선정.</p>
-
+      <h3>LLM 기반 생성형 다음 방문지(Next-POI) 추천 — PIVOT</h3>
+      <p>LLM이 POI 식별자(Semantic ID)를 직접 생성하는 생성형 추천을 연구했습니다. 기존 Semantic ID는 카테고리·지역 등 소수의 텍스트 속성만으로 만들어져, 추천에 핵심적인 POI 간 공동 방문 패턴을 담지 못합니다. 이를 모델 규모가 아닌 정보 표현 방식의 한계로 재정의하고, 텍스트와 사용자 행동 정보를 함께 쓰는 모델을 개발했습니다. 문제 정의부터 실험 설계, 구현, 3개 데이터셋 비교 실험, 논문 작성까지 전 과정을 맡았습니다.</p>
+      <p class="pub"><em>PIVOT: Dual-View POI Semantic IDs with Vocabulary-Only Tuning for Generative Next-POI Recommendation</em> — 제1저자, WSDM 2027 투고(심사 중). 관련 결과 한국정보과학회 2026 제1저자 게재. 한국연구재단 「석사과정생 연구장려금」 선정.</p>
       <h4>수행 내용</h4>
       <ul>
-        <li><b>Dual-View Semantic ID 구조 개발</b> — LLM 기반 Text Embedding과 User-POI Graph에서 LightGCN으로 학습한 Collaborative Filtering Embedding을 각각 RQ-VAE로 양자화하여, POI의 의미 정보와 실제 방문 패턴을 하나의 Semantic ID로 함께 표현.</li>
-        <li><b>Vocabulary-Only Tuning</b> — 새로 추가된 SID Token이 LLM의 언어 표현 공간과 정렬되지 않는 문제를 해결하기 위해, LoRA처럼 Backbone을 조정하는 대신 Backbone을 고정하고 SID Embedding과 Output Parameter만 학습하는 방식을 설계.</li>
-        <li><b>Trajectory-wide SID Loss</b> — 마지막 방문지뿐 아니라 방문기록 전체의 SID에 학습 신호를 주는 Loss를 함께 개발.</li>
-        <li><b>모델 평가</b> — NYC, TKY, CA 실제 사용자 방문 데이터셋에서 Graph 기반, Sequential Recommendation, LLM 기반 Next-POI SOTA 모델과 성능 비교·분석.</li>
+        <li><b>Dual-View Semantic ID</b> — LLaMA-3.1-8B 텍스트 임베딩과 User-POI Graph에서 LightGCN으로 학습한 CF 임베딩을 각각 RQ-VAE로 양자화해, 의미 정보와 방문 패턴을 하나의 ID에 함께 표현.</li>
+        <li><b>Vocabulary-Only Tuning</b> — SID를 문자열로 넣고 LoRA로 Backbone을 조정하는 기존 방식 대신, SID 코드를 독립 토큰으로 추가하고 Backbone은 고정한 채 SID Embedding과 Output Head의 해당 행만 학습.</li>
+        <li><b>Trajectory-wide SID Loss</b> — 마지막 방문지에만 주던 학습 신호를 방문기록 전체 SID로 확장해 새 토큰 학습의 불안정(Collapse) 해소.</li>
+        <li><b>평가</b> — NYC·TKY·CA 데이터셋에서 Graph, Sequential, LLM 기반 SOTA 5종과 비교하고, 토큰 수·CF 주입 방식을 통제한 Ablation으로 성능 향상 원인 검증.</li>
       </ul>
       <h4>결과</h4>
       <ul>
-        <li class="result">3개 데이터셋 모두에서 기존 SOTA 모델을 상회하는 추천 성능 달성.</li>
-        <li class="result">프롬프트에 없는 POI를 예측하는 경우 LoRA 대비 정확도 최대 3배 향상 — SID가 LLM 표현 공간에 정렬되었음을 확인.</li>
-        <li class="result"><b>학습 Parameter 약 1/4 축소, GPU 메모리 41% 절감, 추론 생성 속도 약 2.2배 향상</b>으로 대규모 트래픽 환경의 실시간 서빙 효율성 확보.</li>
+        <li class="result">3개 데이터셋 전 지표에서 SOTA 상회 — Acc@1 기준 최신 SOTA(Think2Go) 대비 최대 <b>10.5%</b>, SID 기반 GNPR-SID 대비 최대 <b>17.5%</b> 향상.</li>
+        <li class="result">프롬프트에 없는(Unseen) POI 예측에서 LoRA 대비 Acc@10 최대 <b>3.1배</b> — 평균 정확도로는 드러나지 않는 일반화 차이를 별도 검증.</li>
+        <li class="result">LoRA 대비 <b>학습 파라미터 4.3배 감소, 학습 GPU 메모리 41% 절감, 생성 처리량 2.2배 향상</b>으로 학습·서빙 비용 절감.</li>
       </ul>
     </div>
   </article>
 
-  
+  <!-- 2. LG전자 산학 -->
+  <article class="entry" id="p-lg">
+    <aside class="meta">
+      <span class="period">2026.01 – 2027.01</span>
+      <span class="role">데이터 파이프라인 개발 담당</span>
+      <span class="tag">LG전자 산학협력</span>
+    </aside>
+    <div class="body">
+      <h3>실시간 이벤트 기반 미디어 콘텐츠 추천 기술 개발</h3>
+      <p>추천 모델이 실시간 뉴스 이벤트를 반영하려면 끊김 없이 갱신되는 데이터가 전제되어야 합니다. 이를 위한 데이터 파이프라인 개발을 맡아, 기업 측과의 정기 미팅에서 요구사항을 확인하며 개발하고 있습니다.</p>
+      <h4>수행 내용</h4>
+      <ul>
+        <li><b>RSS 기반 뉴스 실시간 수집 시스템</b> — 외부 소스 연동, 소스별 갱신 주기·형식 차이·수집 실패를 고려한 갱신 주기 및 예외 처리 설계.</li>
+        <li><b>위키피디아 기반 영화 메타데이터 파싱 시스템</b> 개발.</li>
+        <li><b>뉴스 텍스트 기반 트렌드 키워드 추출</b> 및 추천 시스템 연계 연구 참여.</li>
+      </ul>
+    </div>
+  </article>
 
+  <!-- 3. 설명가능 추천 -->
+  <article class="entry" id="p-xai">
+    <aside class="meta">
+      <span class="period">진행 중</span>
+      <span class="role">석사 연구</span>
+      <span class="tag">Explainable RecSys</span>
+    </aside>
+    <div class="body">
+      <h3>설명가능 추천(Explainable Recommendation) 연구</h3>
+      <p>AOS를 활용해 추출한 Aspect를 추천의 설명으로 가정하고, 추천 결과와 함께 근거를 제시하는 설명가능 추천 시스템을 연구하고 있습니다.</p>
+      <!-- TODO: 연구 시작 시점, 데이터셋, 현재 진척도 한 줄씩 추가 -->
+    </div>
+  </article>
 
-
-  
-  <!-- 2 -->
-  <article class="entry">
+  <!-- 4. HAR -->
+  <article class="entry" id="p-har">
     <aside class="meta">
       <span class="period">2023.02 – 2024.02</span>
       <span class="role">제1저자 · 연구 주도</span>
       <span class="tag">경량 딥러닝 · Edge / IoT</span>
     </aside>
     <div class="body">
-      <h3>임베디드/Edge 환경 경량 딥러닝 모델 개발 — IMU 센서 기반 행동 인식</h3>
-      <p>학부 4학년 기간, 자이로/가속도(IMU) 센서 데이터로 인간 행동을 분류하는 문제를 다뤘습니다. 컴퓨터 자원이 제한적인 IoT·Edge 환경에 맞는 딥러닝 모델을 만들기 위해 모델 구조 개선과 경량화를 연구했으며, 모델 개선에 그치지 않고 데이터 수집 장치 구축부터 온디바이스 배포·측정까지 실험 환경 전체를 직접 만들었습니다.</p>
-      <p class="pub"><em>Improved Deep Learning Structure with Lightweight Depth-wise Convolutions for Human Activity Recognition</em> — 제1저자, Human-centric Computing and Information Sciences (SCIE Q1) 게재. 2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상.</p>
-
+      <h3>Edge 환경 경량 딥러닝 모델 개발 — IMU 센서 기반 행동 인식</h3>
+      <p>자이로·가속도(IMU) 센서로 인간 행동을 분류하는 모델을 자원이 제한된 Edge 기기에서 동작하도록 경량화했습니다. 모델 개선에 그치지 않고 데이터 수집 장치 구축부터 온디바이스 배포·측정까지 실험 환경 전체를 직접 만들었습니다.</p>
+      <p class="pub"><em>Improved Deep Learning Structure with Lightweight Depthwise Convolutions for Human Activity Recognition</em> — 제1저자, Human-centric Computing and Information Sciences (SCIE Q1) 게재. 2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상.</p>
       <h4>수행 내용</h4>
       <ul>
-        <li><b>모델 경량화</b> — 기존 SOTA인 ResNet-SE 모델에 Depth-wise Convolution을 적용해 Parameter와 FLOPs를 줄이고 overfitting을 완화.</li>
-        <li><b>데이터 수집 장치 구축</b> — Raspberry Pi에 IMU 센서 모듈을 I2C로 연결하고, 센서 샘플링 주기 설정·타임스탬프 기록·버퍼 관리 등 수집 파이프라인을 C 언어로 직접 구현. 센서와 수집 코드 사이의 지연 누적 문제를 발견해 수집 방식을 수정.</li>
-        <li><b>사용자 실험</b> — 직접 구축한 장치를 피험자 신체에 부착해 데이터를 수집하고, 공개 데이터셋과 함께 전처리해 학습·평가에 활용.</li>
-        <li><b>온디바이스 평가</b> — TF-Lite로 변환해 Android와 Raspberry Pi(Linux)에 배포하고, 동일한 파이프라인 위에서 추론을 실행해 정확도·추론시간·CPU 사용량·에너지 소비를 기존 모델과 비교.</li>
+        <li><b>모델 경량화</b> — SOTA ResNet-SE에 Depthwise Separable Convolution을 적용해 Parameter·FLOPs를 줄이고 과적합 완화.</li>
+        <li><b>데이터 수집 장치 구축</b> — Raspberry Pi에 IMU 센서를 I2C로 연결하고, 샘플링 주기·타임스탬프·버퍼 관리 등 수집 파이프라인을 C로 구현. 저장 과정의 지연 누적 문제를 찾아 수집 방식 수정.</li>
+        <li><b>사용자 실험</b> — 구축한 장치를 피험자에게 부착해 실환경 데이터를 수집하고 공개 데이터셋과 함께 학습·평가.</li>
+        <li><b>온디바이스 평가</b> — TF-Lite로 변환해 Android와 Raspberry Pi에 배포, 정확도·추론시간·CPU 사용량·소비 전력 비교.</li>
       </ul>
       <h4>결과</h4>
       <ul>
-        <li class="result"><b>연산량(FLOPs) 73.6% 절감</b>(42.75M → 11.26M) 및 <b>파라미터 56% 감소</b>(138K → 61K), 3개 공개 데이터셋(WISDM, UCI-HAR, PAMAP2) SOTA 달성(UCI-HAR 정확도 <b>99.7%</b>).</li>
-        <li class="result">직접 수집한 <b>실환경(Unseen) 데이터에서 정확도 +4.0%p 향상(93.8% → 97.8%, F1 0.979) 및 추론 속도 4.4배 가속</b> — 경량화가 소규모·실환경 데이터의 일반화 성능을 높임을 실증.</li>
-        <li class="result">Raspberry Pi 4 실기기에서 <b>추론 시간 64.7% 단축(2.8배 가속, 5.08s → 1.79s) 및 소비 전력 12.5% 절감</b>, Android 환경에서 <b>추론 시간 38.6% 단축</b>(6.82s → 4.19s).</li>
-      </ul>
-    </div>
-  </article>
-  
-
-
-
-  
-  <!-- 3 -->
-  <article class="entry">
-    <aside class="meta">
-      <span class="period">2026.01 – 현재</span>
-      <span class="role">데이터 파이프라인 개발 담당</span>
-      <span class="tag">LG전자 산학협력</span>
-    </aside>
-    <div class="body">
-      <h3>실시간 이벤트 기반 미디어 콘텐츠 추천 기술 개발</h3>
-      <p>추천 모델이 실시간 뉴스 이벤트를 활용하려면 끊기지 않고 갱신되는 데이터가 전제되어야 합니다. 이를 위한 데이터 파이프라인 개발을 맡아, 기업 측과의 정기 미팅에서 요구사항을 확인하며 개발을 진행하고 있습니다.</p>
-      <h4>수행 내용</h4>
-      <ul>
-        <li><b>RSS 기반 뉴스 실시간 수집 시스템</b> — 외부 소스 연동, 소스별 갱신 주기와 형식 차이·수집 실패 상황을 고려한 갱신 주기·예외 처리 설계.</li>
-        <li><b>위키피디아 기반 영화 메타데이터 파싱 시스템</b> 개발.</li>
-        <li><b>뉴스 텍스트 기반 트렌드 키워드 추출</b> 및 추천 시스템 연계 방안 연구 참여.</li>
+        <li class="result"><b>FLOPs 73.7% 절감</b>(42.75M → 11.26M), <b>파라미터 57.6% 감소</b>(138K → 59K). 공개 데이터셋 3종(WISDM, UCI-HAR, PAMAP2)에서 SOTA, UCI-HAR 정확도 <b>99.7%</b>.</li>
+        <li class="result">직접 수집한 <b>실환경(Unseen) 데이터 정확도 93.8% → 97.8%</b>(F1 0.979) — 경량화가 소규모 실환경 데이터의 일반화를 높임을 실증.</li>
+        <li class="result">Raspberry Pi 4에서 <b>추론 시간 64.7% 단축</b>(5.08s → 1.79s, 2.8배), <b>평균 소비 전력 12.1% 절감</b>. Android에서 <b>추론 시간 38.6% 단축</b>(6.83s → 4.19s).</li>
       </ul>
     </div>
   </article>
 
-  <!-- 4 -->
-  <article class="entry">
+  <!-- 5. 위험 행동 탐지 -->
+  <article class="entry" id="p-danger">
     <aside class="meta">
       <span class="period">2023.09 – 2024.02</span>
       <span class="role">학생연구자</span>
       <span class="tag">한국연구재단 과제</span>
     </aside>
     <div class="body">
-      <h3>영상 기반 위험 행동 탐지 연구</h3>
+      <h3>감시카메라 영상 기반 위험 행동 탐지 연구</h3>
       <p>과제명: 생활안전을 위한 IoT 멀티 센서데이터 분석 기반 상황인지 위험 탐지 및 위험 상황 공유 연구</p>
-      <h4>수행 내용</h4>
       <ul>
-        <li><b>위험 상황 탐지</b> — 감시 카메라 영상 기반 인간 행동 분류·예측을 통해 위험물체 접근 등 위험 상황을 탐지.</li>
-        <li><b>데이터 구축</b> — 공개 데이터셋만으로는 위험물체 접근 같은 상황을 충분히 다루기 어려워, 시나리오를 정의해 영상 데이터를 직접 수집·라벨링.</li>
-        <li><b>모델 파인튜닝</b> — Skeleton 기반 행동인식 모델(OpenPose, AlphaPose)을 직접 수집한 데이터로 fine-tuning.</li>
+        <li><b>데이터 구축</b> — 공개 데이터셋이 다루지 못하는 위험물체 접근 등의 상황을 시나리오로 정의해 영상 데이터를 직접 수집·라벨링.</li>
+        <li><b>모델 파인튜닝</b> — AlphaPose 기반 Skeleton 행동인식 모델을 수집 데이터로 fine-tuning해 감시 카메라 영상에서 위험 상황 탐지.</li>
       </ul>
     </div>
   </article>
 
+  <!-- 6. 자율주행 -->
+  <article class="entry" id="p-car">
+    <aside class="meta">
+      <span class="period">2023.09 – 2023.12</span>
+      <span class="role">팀 리더 (4인)</span>
+      <span class="tag">교과 프로젝트</span>
+    </aside>
+    <div class="body">
+      <h3>자율주행 자동차 개발 — 자율시스템설계</h3>
+      <p>경북대학교 자율시스템설계 교과목에서 팀 리더로 자율주행 자동차를 개발했습니다. 카메라 기반 경로 인식과 조향 제어를 담당했으며, 구동계 응답 지연으로 발생하는 주행 불안정 문제를 확인하여, 인식 주기와 응답 지연을 측정하고 이를 반영한 PID 제어를 적용해 주행 안정성을 개선하였습니다.</p>
+      <ul>
+        <li class="result">최종 평가 <b>1위</b>, A+.</li>
+      </ul>
+    </div>
+  </article>
+
+  <h2 class="section">교육 및 대외활동</h2>
+  <table class="plain">
+    <tbody><tr><td class="when">2025.03 – 현재</td><td>「공학도를 위한 창의적 컴퓨팅」 Python 실습 조교<span class="sub">3개 학기 실습 직접 진행 · 학생들이 막히는 지점을 관찰해 진행 순서 조정</span></td><td class="note">한양대학교</td></tr>
+    <tr><td class="when">2025.03 – 2025.06</td><td>「Algorithmic, Computational, and Data Thinking」 수업 조교<span class="sub">전 과정 영어 진행 · 토론 지도, Python Lab 및 온라인 튜터링</span></td><td class="note">한양대학교</td></tr>
+    <tr><td class="when">2025.03 – 2025.07</td><td>영어회화 동아리<span class="sub">기술·사회 이슈 주제 영어 토론</span></td><td class="note">한양대학교</td></tr>
+  </tbody></table>
+
+  <h2 class="section">어학</h2>
+  <table class="plain">
+    <tbody><tr><td class="when">영어</td><td>OPIc Intermediate Mid 2 (IM2)</td><td class="note">ACTFL · 2026.09</td></tr>
+  </tbody></table>
+
   <footer>
-    <span>최종 수정 2026.09</span>
+    <span>최종 수정 2026.10</span>
   </footer>
 </div>
-</body>
-</html>
+
+</body></html>
