@@ -445,15 +445,15 @@
       <span class="tag">경량 딥러닝 · Edge / IoT</span>
     </aside>
     <div class="body">
-      <h3>Edge 환경 E2E 행동 인식 시스템 — 센서 수집 · 모델 경량화 · 온디바이스 배포</h3>
-      <p>자이로·가속도(IMU) 센서로 인간 행동을 분류하는 모델을 자원이 제한된 Edge 기기에서 동작하도록 경량화했습니다. 모델 개선에 그치지 않고 데이터 수집 장치 구축부터 온디바이스 배포·측정까지 실험 환경 전체를 직접 만들었습니다.</p>
+      <h3>Edge device 환경 E2E 행동 인식 시스템 — 센서 수집 · 모델 경량화 · On-device 배포</h3>
+      <p>자이로·가속도(IMU) 센서로 인간 행동을 분류하는 모델을 자원이 제한된 Edge device에서 동작하도록 경량화했습니다. 모델 개선에 그치지 않고 데이터 수집 장치 구축부터 On-device 배포·측정까지 실험 환경 전체를 직접 만들었습니다.</p>
       <p class="pub"><em>Improved Deep Learning Structure with Lightweight Depthwise Convolutions for Human Activity Recognition</em> — 제1저자, HCIS (SCIE Q1) 게재. 2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상.</p>
       <h4>수행 내용</h4>
       <ul>
         <li><b>모델 경량화</b> — SOTA ResNet-SE에 Depthwise Separable Convolution을 적용해 Parameter·FLOPs를 줄이고 Overfitting 완화.</li>
-        <li><b>데이터 수집 장치 구축</b> — Raspberry Pi에 IMU 센서를 I2C로 연결하고, 샘플링 주기·타임스탬프·버퍼 관리 등 수집 파이프라인을 C로 구현. 저장 과정의 지연 누적 문제를 찾아 수집 방식 수정.</li>
+        <li><b>데이터 수집 장치 구축</b> — Raspberry Pi에 IMU 센서를 I2C로 연결하고, 샘플링 주기·타임스탬프·버퍼 관리 등 수집 파이프라인을 C로 구현.</li>
         <li><b>사용자 실험</b> — 구축한 장치를 피험자에게 부착해 실환경 데이터를 수집하고 공개 데이터셋과 함께 학습·평가.</li>
-        <li><b>온디바이스 평가</b> — TF-Lite로 변환해 Android와 Raspberry Pi에 배포, 정확도·추론시간·CPU 사용량·소비 전력 비교.</li>
+        <li><b>온디바이스 평가</b> — 학습된 DL모델을 TF-Lite로 변환해 C 및 Java를 통해 Android와 Raspberry Pi에 배포, 정확도·추론시간·CPU 사용량·소비 전력 비교.</li>
       </ul>
       <h4>결과</h4>
       <ul>
@@ -490,7 +490,7 @@
       <span class="tag">교과 프로젝트</span>
     </aside>
     <div class="body">
-      <h3>자율주행 자동차 개발 — 자율시스템설계</h3>
+      <h3>자율주행 자동차 개발</h3>
       <p>경북대학교 자율시스템설계 교과목에서 팀 리더로 자율주행 자동차를 개발했습니다. 카메라 기반 경로 인식과 조향 제어를 담당했으며, 구동계 응답 지연으로 발생하는 주행 불안정 문제를 확인하여, 인식 주기와 응답 지연을 측정하고 이를 반영한 PID 제어를 적용해 주행 안정성을 개선하였습니다.</p>
       <ul>
         <li class="result">최종 평가 <b>1위</b>, A+.</li>
