@@ -1,3 +1,6 @@
+폭 수정과 "추천 연" 오타 수정까지 반영한 전체 파일이에요.
+
+```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -134,12 +137,12 @@
   article.entry{
     display:grid;
     grid-template-columns:1fr;
-    gap:12px 48px;
+    gap:12px 36px;
     padding:36px 0;
     border-top:1px solid var(--rule);
   }
   article.entry:first-of-type{border-top:0;padding-top:20px}
-  @media (min-width:820px){article.entry{grid-template-columns:200px 1fr}}
+  @media (min-width:820px){article.entry{grid-template-columns:170px 1fr}}
   .meta{font-size:14.5px;color:var(--ink-2);line-height:1.6}
   .meta .period{display:block;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
   .meta .role{display:block;margin-top:4px}
@@ -160,7 +163,7 @@
     line-height:1.35;
     margin:0 0 14px;
   }
-  .body p{margin:0 0 14px;color:var(--ink-2);max-width:42em}
+  .body p{margin:0 0 14px;color:var(--ink-2)}
   .body p.pub{
     color:var(--ink);
     padding:14px 18px;
@@ -175,7 +178,7 @@
     margin:22px 0 8px;
     color:var(--ink);
   }
-  .body ul{margin:0;padding-left:0;list-style:none;max-width:44em}
+  .body ul{margin:0;padding-left:0;list-style:none}
   .body li{
     position:relative;
     padding-left:18px;
@@ -289,7 +292,7 @@
   <ul class="highlights">
     <li><strong>WSDM 2027 제1저자 투고</strong><span>LLM 기반, 다음 방문지, 생성형 추천 연구(심사 중)</span></li>
     <li><strong>SCIE Q1 제1저자 게재</strong><span>센서 기반, 행동 인식, On-device CNN 모델 경량화 연구</span></li>
-    <li><strong>한국연구재단 석사과정생 연구장려금</strong><span>LLM 기반, 다음 방문지, 생성형 추천 연구로 선정</span></li>
+    <li><strong>한국연구재단 석사과정생 연구장려금 선정</strong><span>LLM 기반, 다음 방문지, 생성형 추천 연구로 선정</span></li>
     <li><strong>2023 KSC 논문경진대회 우수상</strong><span>센서 기반, 행동 인식, On-device CNN 모델 경량화 연구로 선정</span></li>
   </ul>
 
@@ -347,7 +350,7 @@
     <tbody>
     <tr>
       <td class="when">2026.01 – 2027.01</td>
-      <td>실시간 이벤트 기반 미디어 콘텐츠 추천 연<span class="sub">RSS 뉴스 실시간 수집 · 위키피디아 메타데이터 파싱 파이프라인</span></td>
+      <td>실시간 이벤트 기반 미디어 콘텐츠 추천 연구<span class="sub">RSS 뉴스 실시간 수집 · 위키피디아 메타데이터 파싱 파이프라인</span></td>
       <td class="note">LG전자 산학협력<br>연구자(파이프라인 개발)</td>
     </tr>
     <tr>
@@ -388,7 +391,7 @@
     <div class="body">
       <h3>LLM 기반 생성형 다음 방문지(Next-POI) 추천 — PIVOT</h3>
       <p>LLM이 POI 식별자(Semantic ID)를 직접 생성하는 생성형 추천을 연구했습니다. 기존 Semantic ID는 카테고리·지역 등 소수의 텍스트 속성만으로 만들어져, 추천에 핵심적인 POI 간 공동 방문 패턴을 담지 못합니다. 이를 모델 규모가 아닌 정보 표현 방식의 한계로 재정의하고, 텍스트와 사용자 행동 정보를 함께 쓰는 모델을 개발했습니다. 문제 정의부터 실험 설계, 구현, 3개 데이터셋 비교 실험, 논문 작성까지 전 과정을 맡았습니다.</p>
-      <p class="pub"><em>PIVOT: Dual-View POI Semantic IDs with Vocabulary-Only Tuning for Generative Next-POI Recommendation</em> — 제1저자, WSDM 2027 투고(심사 중).    관련 결과 한국정보과학회 2026 제1저자 게재.    한국연구재단 「석사과정생 연구장려금」 선정.</p>
+      <p class="pub"><em>PIVOT: Dual-View POI Semantic IDs with Vocabulary-Only Tuning for Generative Next-POI Recommendation</em> — 제1저자, WSDM 2027 투고(심사 중). 관련 결과 한국정보과학회 2026 제1저자 게재. 한국연구재단 「석사과정생 연구장려금」 선정.</p>
       <h4>수행 내용</h4>
       <ul>
         <li><b>Dual-View Semantic ID</b> — LLaMA-3.1-8B 텍스트 임베딩과 User-POI Graph에서 LightGCN으로 학습한 CF 임베딩을 각각 RQ-VAE로 양자화해, 의미 정보와 방문 패턴을 하나의 ID에 함께 표현.</li>
@@ -427,7 +430,7 @@
   <!-- 3. 설명가능 추천 -->
   <article class="entry" id="p-xai">
     <aside class="meta">
-      <span class="period">2026.07 - 현재</span>
+      <span class="period">2026.07 – 현재</span>
       <span class="role">연구 주도</span>
       <span class="tag">Explainable RecSys</span>
     </aside>
@@ -447,7 +450,7 @@
     <div class="body">
       <h3>Edge 환경 E2E 행동 인식 시스템 — 센서 수집 · 모델 경량화 · 온디바이스 배포</h3>
       <p>자이로·가속도(IMU) 센서로 인간 행동을 분류하는 모델을 자원이 제한된 Edge 기기에서 동작하도록 경량화했습니다. 모델 개선에 그치지 않고 데이터 수집 장치 구축부터 온디바이스 배포·측정까지 실험 환경 전체를 직접 만들었습니다.</p>
-      <p class="pub"><em>Improved Deep Learning Structure with Lightweight Depthwise Convolutions for Human Activity Recognition</em> — 제1저자, HCIS (SCIE Q1) 게재.   2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상.</p>
+      <p class="pub"><em>Improved Deep Learning Structure with Lightweight Depthwise Convolutions for Human Activity Recognition</em> — 제1저자, HCIS (SCIE Q1) 게재. 2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상.</p>
       <h4>수행 내용</h4>
       <ul>
         <li><b>모델 경량화</b> — SOTA ResNet-SE에 Depthwise Separable Convolution을 적용해 Parameter·FLOPs를 줄이고 Overfitting 완화.</li>
@@ -474,6 +477,7 @@
     <div class="body">
       <h3>감시카메라 영상 기반 위험 행동 탐지 연구</h3>
       <p>과제명: 생활안전을 위한 IoT 멀티 센서데이터 분석 기반 상황인지 위험 탐지 및 위험 상황 공유 연구</p>
+      <h4>수행 내용</h4>
       <ul>
         <li><b>데이터 구축</b> — 공개 데이터셋이 다루지 못하는 위험물체 접근 등의 상황을 시나리오로 정의해 영상 데이터를 직접 수집·라벨링.</li>
         <li><b>모델 파인튜닝</b> — AlphaPose 기반 Skeleton 행동인식 모델을 수집 데이터로 fine-tuning해 감시 카메라 영상에서 위험 상황 탐지.</li>
@@ -500,7 +504,7 @@
   <h2 class="section">교육 및 대외활동</h2>
   <table class="plain">
     <tbody>
-    <tr><td class="when">2025.03 – 현재</td><td>「공학도를 위한 창의적 컴퓨팅」 Python 실습 조교<span class="sub">3개 학기 실습 직접 진행 · 학생들이 막히는 지점을 관찰해 진행 순서 조정</span></td><td class="note">한양대학교</td></tr>
+    <tr><td class="when">2025.03 – 2026.12</td><td>「공학도를 위한 창의적 컴퓨팅」 Python 실습 조교<span class="sub">3개 학기 실습 수업 직접 진행.</span></td><td class="note">한양대학교</td></tr>
     <tr><td class="when">2025.03 – 2025.06</td><td>「Algorithmic, Computational, and Data Thinking」 프로그래밍 수업 조교<span class="sub">전 과정 영어 진행 · 토론 지도, Python Lab 및 온라인 튜터링</span></td><td class="note">한양대학교</td></tr>
     <tr><td class="when">2025.03 – 2025.07</td><td>영어회화 동아리 부원<span class="sub">기술·사회 이슈 주제 영어 토론</span></td><td class="note">한양대학교</td></tr>
     </tbody>
@@ -516,3 +520,4 @@
 </div>
 </body>
 </html>
+```
