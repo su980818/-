@@ -109,13 +109,28 @@
   .highlights strong{display:block;font-size:17px;font-weight:700;margin-bottom:4px}
   .highlights span{color:var(--ink-2);font-size:14.5px}
 
-  /* ---------- 섹션 / 상세 항목 ---------- */
+  /* ---------- 섹션 제목 ---------- */
   h2.section{
-    font-size:14px;
-    font-weight:600;
-    color:var(--ink-3);
-    margin:48px 0 8px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:20px;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    color:var(--ink);
+    margin:60px 0 12px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--ink);
   }
+  h2.section::before{
+    content:"";
+    width:5px;
+    height:20px;
+    border-radius:2px;
+    background:var(--teal);
+  }
+
+  /* ---------- 상세 항목 ---------- */
   article.entry{
     display:grid;
     grid-template-columns:1fr;
@@ -236,6 +251,7 @@
     body{background:#fff;font-size:12.5px;line-height:1.5}
     .page{padding:0;max-width:none}
     .hero h1{font-size:30px}
+    h2.section{font-size:16px;margin-top:32px;break-after:avoid}
     article.entry{padding:18px 0;break-inside:avoid}
     .body p.pub{background:none;padding-left:12px}
     table.papers tr{break-inside:avoid}
@@ -266,7 +282,7 @@
     </div>
     <dl class="contact">
       <dt>이메일</dt><dd><a href="mailto:su980818@naver.com">su980818@naver.com</a></dd>
-      <dt>소속</dt><dd>한양대학교 인공지능학과 석사과정 · Data Intelligence Lab (2027.02 졸업예정)</dd>
+      <dt>소속</dt><dd>한양대학교 인공지능학과 석사과정 · DILAB</dd>
     </dl>
   </header>
 
@@ -307,9 +323,7 @@
       </tr>
       <tr>
         <td class="when">2026.06</td>
-        <td class="title">
-          <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12929319" target="_blank" rel="noopener">
-          거대 언어모델 기반의 다음 방문지 추천을 위한 속성 분리형 시맨틱 ID 기법<span class="venue">한국정보과학회 2026 한국컴퓨터종합학술대회</span></td>
+        <td class="title"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12929319" target="_blank" rel="noopener">거대 언어모델 기반의 다음 방문지 추천을 위한 속성 분리형 시맨틱 ID 기법</a><span class="venue">한국정보과학회 2026 한국컴퓨터종합학술대회</span></td>
         <td class="desc">(PIVOT 관련 연구)</td>
         <td class="author">제1저자</td>
       </tr>
@@ -321,9 +335,7 @@
       </tr>
       <tr>
         <td class="when">2023.12</td>
-        <td class="title">
-          <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11705450" target="_blank" rel="noopener">
-          안드로이드 환경에서의 인간행동분류를 위한 CNN 딥러닝 모델 개선<span class="venue">한국정보과학회 2023 한국소프트웨어종합학술대회 <br>학부생/주니어 논문경진대회 우수상</span></td>
+        <td class="title"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11705450" target="_blank" rel="noopener">안드로이드 환경에서의 인간행동분류를 위한 CNN 딥러닝 모델 개선</a><span class="venue">한국정보과학회 2023 한국소프트웨어종합학술대회 <br>학부생/주니어 논문경진대회 우수상</span></td>
         <td class="desc">(Lightweight Depthwise Convolutions 관련 연구)</td>
         <td class="author">제1저자</td>
       </tr>
