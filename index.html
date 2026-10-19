@@ -144,16 +144,6 @@
   .meta{font-size:14.5px;color:var(--ink-2);line-height:1.6}
   .meta .period{display:block;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
   .meta .role{display:block;margin-top:4px}
-  .meta .tag{
-    display:inline-block;
-    margin-top:12px;
-    padding:3px 10px;
-    border-radius:3px;
-    background:var(--teal-soft);
-    color:var(--teal);
-    font-size:13px;
-    font-weight:600;
-  }
   .body h3{
     font-size:22px;
     font-weight:700;
@@ -304,12 +294,48 @@
     font-weight:600;
   }
 
-  /* ---------- 태그 종류별 스타일 ---------- */
-  .meta .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-  .meta .tags .tag{margin-top:0}
-  .meta .tag.domain{background:var(--teal-soft);color:var(--teal)}
-  .meta .tag.tech{background:#E6EAF3;color:#3D4A66}
-  .meta .tag.org{background:var(--ink);color:#fff}
+  /* ---------- 상세 항목 태그: 부드러운 블럭 스택 ---------- */
+  .meta .tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:14px;
+  }
+  .meta .tag{
+    display:block;
+    margin:0;
+    padding:6px 12px;
+    border-radius:9px;
+    font-size:12.5px;
+    font-weight:600;
+    line-height:1.35;
+    letter-spacing:-0.01em;
+    white-space:normal;
+    word-break:keep-all;
+  }
+  /* PC: 왼쪽 칸 너비에 맞춰 같은 폭 블럭으로 세로로 쌓기 */
+  @media (min-width:820px){
+    .meta .tags{
+      flex-direction:column;
+      align-items:stretch;
+      gap:5px;
+    }
+  }
+  /* 태그 종류별 색 */
+  .meta .tag.domain{
+    background:var(--teal-soft);
+    color:var(--teal);
+    box-shadow:inset 0 0 0 1px rgba(31,110,120,.14);
+  }
+  .meta .tag.tech{
+    background:#EEF1F7;
+    color:#3D4A66;
+    box-shadow:inset 0 0 0 1px rgba(61,74,102,.12);
+  }
+  .meta .tag.org{
+    background:#2B3A55;
+    color:#fff;
+  }
 
   /* ==========================================================================
      [통합] 인쇄 및 PDF 저장 전용 스타일 (@media print) — 이 부분이 핵심입니다!
@@ -401,8 +427,17 @@
     }
     article.entry:first-of-type { padding-top: 8px !important; }
     .meta { font-size: 11.5px !important; }
-    .meta .tags { gap: 4px !important; margin-top: 6px !important; }
-    .meta .tag { font-size: 10px !important; padding: 2px 6px !important; }
+    .meta .tags {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 3px !important;
+      margin-top: 7px !important;
+    }
+    .meta .tag {
+      font-size: 9.5px !important;
+      padding: 3px 7px !important;
+      border-radius: 6px !important;
+    }
     .body h3 { font-size: 14.5px !important; margin-bottom: 6px !important; }
     .body p { margin-bottom: 8px !important; font-size: 11.5px !important; }
     .body p.pub { padding: 6px 10px !important; font-size: 11.5px !important; background: var(--sheet) !important; }
@@ -427,7 +462,7 @@
   <header class="hero">
     <div>
       <h1>장승우 <span class="en">SeungWoo Jang</span></h1>
-      <p class="lead">User-Item Graph와 LLM을 결합하는 <b>개인화 Generative Recommendation</b>을 연구합니다. <b>Unseen/Cold-start 일반화</b>부터 <b>실시간 데이터 파이프라인 구축</b>, <b>모델 경량화 및 최적화</b>까지 실제 서비스 환경에서 동작하는 추천 시스템을 지향합니다.</p>
+      <p class="lead">Graph와 LLM을 결합하는 <b>개인화 Generative Recommendation</b>을 연구합니다. <b>Unseen/Cold-start 일반화</b>부터 <b>실시간 데이터 파이프라인 구축</b>, <b>모델 경량화 및 최적화</b>까지 실제 서비스 환경에서 동작하는 추천 시스템을 지향합니다.</p>
       <ul class="skills" aria-label="주요 역량">
         <li class="core">#LLM RecSys</li>
         <li class="core">#Graph RecSys</li>
@@ -516,8 +551,8 @@
     </tr>
     <tr>
       <td class="when">2026.01 – 2027.01</td>
-      <td>실시간 이벤트 기반 미디어 콘텐츠 추천 연구<span class="sub">RSS 뉴스 실시간 수집 · 위키피디아 메타데이터 파싱 파이프라인</span></td>
-      <td class="note"> <span class="hl">LG전자 산학협력</span><br>연구자 (데이터 파이프라인 개발)</td>
+      <td>뉴스-컨텐츠 그래프 기반 실시간 미디어 추천 연구<span class="sub">영화 메타데이터 파싱 · RSS 뉴스 실시간 수집</span></td>
+      <td class="note"><span class="hl">LG전자 산학협력</span><br>연구자 (데이터 파이프라인 개발)</td>
     </tr>
     <tr>
       <td class="when">2023.09 – 2024.02</td>
@@ -549,10 +584,10 @@
       <span class="role">제1저자 · 연구 주도</span>
       <div class="tags">
         <span class="tag domain">Next-POI RecSys</span>
-        <span class="tag tech">LLM Generative RecSys</span>
-        <span class="tag tech">GNN RecSys</span>
-        <span class="tag tech">Representation Alignment</span>
-        <span class="tag tech">Semantic ID</span>
+        <span class="tag tech">#LLM Generative RecSys</span>
+        <span class="tag tech">#Graph RecSys</span>
+        <span class="tag tech">#LLM Representation Alignment</span>
+        <span class="tag tech">#Semantic ID</span>
       </div>
     </aside>
     <div class="body">
@@ -583,8 +618,8 @@
       <div class="tags">
         <span class="tag domain">Explainable RecSys</span>
         <span class="tag domain">Rating prediction</span>
-        <span class="tag tech">LLM Generative RecSys</span>
-        <span class="tag tech">Graph retrieval</span>
+        <span class="tag tech">#LLM Generative RecSys</span>
+        <span class="tag tech">#Graph retrieval</span>
       </div>
     </aside>
     
@@ -598,24 +633,41 @@
   <article class="entry" id="p-lg">
     <aside class="meta">
       <span class="period">2026.01 – 2027.01</span>
-      <span class="role">데이터 파이프라인 개발 담당</span>
+      <span class="role">데이터 파이프라인 개발 담당<br>과제 초기 단계 참여</span>
       <div class="tags">
+        <span class="tag org">LG전자 산학협력</span>
         <span class="tag domain">Media RecSys</span>
-        <span class="tag tech">Data Pipeline</span>
+        <span class="tag tech">#Graph RecSys</span>
+        <span class="tag tech">#Data Pipeline</span>
       </div>
     </aside>
     <div class="body">
       <h3>[LG전자 산학협력] 실시간 이벤트 기반 미디어 콘텐츠 추천 기술 개발 과제</h3>
-      <p>추천 모델이 실시간 뉴스 이벤트를 반영하려면 끊김 없이 갱신되는 데이터가 전제되어야 합니다. 이를 위한 데이터 파이프라인 개발을 맡아, 기업 측과의 정기 미팅에서 요구사항을 확인하며 개발하고 있습니다.</p>
+      <p>실시간으로 발행되는 뉴스에 맞춰 연관 OTT 컨텐츠(영화·TV)를 추천하는 그래프 기반 추천 과제입니다. 
+        뉴스와 컨텐츠를 각각 그래프로 구성한 뒤, 공유하는 토픽 노드로 두 그래프를 잇는 뉴스-컨텐츠 통합 그래프에서 추천 후보를 찾습니다. 
+        기업 측과의 정기 미팅에서 요구사항을 확인하며, 그래프의 구성을 위한 데이터를 실시간으로 공급하는 파이프라인을 개발했습니다.</p>
       <h4>수행 내용</h4>
       <ul>
-        <li><b>RSS 기반 뉴스 실시간 수집 시스템</b> — 외부 소스 연동, 소스별 갱신 주기·형식 차이·수집 실패를 고려한 갱신 주기 및 예외 처리 설계.</li>
-        <li><b>위키피디아 기반 영화 메타데이터 파싱 시스템</b> 개발.</li>
-        <li><b>뉴스 텍스트 기반 트렌드 키워드 추출</b> 및 추천 시스템 연계 연구 참여.</li>
+        <li><b>컨텐츠 제목 검색 개선</b> — 제목·유형·연도 조합으로 검색하고, 실패시 조건을 완화해 재검색하도록 구현. 원제·로마자 제목은 redirect로 처리하여 컨텐츠 검색 시스템의 정확도를 개선.</li>
+        <li><b>컨텐츠 그래프용 메타데이터 수집·파싱</b> 
+          — Wikidata(감독·장르·줄거리·배우-배역)를 수집 하여, 
+          배우-배역은 컨텐츠 그래프의 인물 노드로, 
+          장르·줄거리는 LLM으로 처리하여 토픽 노드로 이어지도록 구현. 
+          문서마다 다른 HTML 구조와 한국어 문서의 다양한 배우-배역 표기를 처리하는 파서를 작성했고, 
+          Wikidata에 배역 정보가 없으면 Wikipedia의 파싱 결과로 보완하도록 구현.</li>
+        <li><b>뉴스 그래프용 실시간 수집</b> — 국내 9개·해외 6개 언론사의 RSS를 20분 주기로 수집하고, 
+          기사 URL에서 본문을 크롤링해 6개 필드(제목·URL·본문·발행시각·언론사·카테고리)를 JSONL로 저장. RSS 미제공·유료 구독·피드 중단으로 수집이 불가능한 언론사는 성향이 비슷한 언론사로 대체.</li>
+        <li><b>임베딩 기반 뉴스 중복 제거</b> — 여러 언론사가 같은 사건을 반복 보도하면 하나의 이슈가 여러 기사를 통해 수집되는 문제를 막기 위해,
+          텍스트 임베딩 기반 클러스터링을 설계 하여 실시간 중복률을 분석하여 처리.</li>
+      </ul>
+      <h4>결과</h4>
+      <ul>
+        <li class="result">하루 약 3,000건 뉴스 실시간 수집 (20분 주기 평균 42.7건, 건당 약 0.74초).</li>
+        <li class="result">시간당 유입 기사(KR 평균 138건)를 20초 이내에 처리해, 그래프 갱신 주기 안에서 실시간 중복 제거가 가능함을 확인.</li>
+        <li class="result">Wikipedia 줄거리를 확보한 한국 컨텐츠 3,809건을 확보해, 컨텐츠 그래프의 토픽 할당과 뉴스-컨텐츠 연결 단계의 입력 데이터로 사용.</li>
       </ul>
     </div>
   </article>
-
   <!-- 4. HAR -->
   <article class="entry" id="p-har">
     <aside class="meta">
@@ -625,9 +677,9 @@
         <span class="tag domain">인간행동분류</span>
         <span class="tag domain">Sensor data</span>
         <span class="tag domain">On-device</span>
-        <span class="tag tech">CNN model 경량화</span>
-        <span class="tag tech">Android</span>
-        <span class="tag tech">Raspberry Pi</span>
+        <span class="tag tech">#CNN model 경량화</span>
+        <span class="tag tech">#Android</span>
+        <span class="tag tech">#Raspberry Pi</span>
       </div>
 
     </aside>
@@ -659,7 +711,7 @@
         <div class="tags">
         <span class="tag domain">Abnormal prediction</span>
         <span class="tag domain">Video data</span>
-        <span class="tag tech">LoRA</span>
+        <span class="tag tech">#LoRA</span>
       </div>
     </aside>
     <div class="body">
@@ -679,7 +731,8 @@
       <span class="period">2023.09 – 2023.12</span>
       <span class="role">팀 리더 (4인)</span>
       <div class="tags">
-        <span class="tag tech">OpenCV</span>
+        <span class="tag domain">자율주행</span>
+        <span class="tag tech">#OpenCV</span>
       </div>
 
     </aside>
