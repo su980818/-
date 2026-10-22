@@ -529,7 +529,7 @@
       <tr>
         <td class="when">2025.04</td>
         <td class="title"><a href="https://doi.org/10.22967/HCIS.2025.15.020" target="_blank" rel="noopener">Improved Deep Learning Structure with Lightweight Depthwise Convolutions for Human Activity Recognition</a><span class="venue"><span class="num">HCIS (SCIE Q1)</span></span></td>
-        <td class="desc">Depthwise Convolution으로 행동 인식 모델을 경량화해 FLOPs 73.7% 절감, Raspberry Pi 및 Android환경에서 E2E 추론 모델 개발, 추론 2.8배 가속 및 실제 환경 수집 데이터 정확도 향상(일반화 성능)</td>
+        <td class="desc">Depthwise Convolution으로 행동 인식 모델을 경량화해 FLOPs 73.7% 절감, Raspberry Pi 및 Android환경에서 E2E 추론 모델 개발, 추론 2.8배 가속 및 실제 수집 데이터에서의 일반화 정확도 향상</td>
         <td class="author">제1저자</td>
       </tr>
       <tr>
@@ -702,7 +702,7 @@
     </aside>
     <div class="body">
       <h3>Improved Deep Learning Structure with Lightweight Depthwise Convolutions for Human Activity Recognition</h3>
-      <p>자이로·가속도(IMU) 센서로 인간 행동을 분류하는 모델을 자원이 제한된 Edge device에서 동작하도록 경량화했습니다. 모델 개선에 그치지 않고 데이터 수집 장치 구축부터 On-device 배포·측정까지 실험 환경 전체를 직접 만들었습니다.</p>
+      <p>자이로·가속도(IMU) 센서로 인간 행동을 분류하는 모델을 자원이 제한된 Edge device에서 동작하도록 경량화했습니다. 모델 개선에 그치지 않고 데이터 수집 장치 구축부터 On-device 배포·측정까지(E2E) 실험 환경 전체를 직접 만들었습니다.</p>
       <p class="pub">HCIS(SCIE Q1) 제1저자. 2023 한국소프트웨어종합학술대회 학부생/주니어 논문경진대회 우수상.</p>
       <h4>수행 내용</h4>
       <ul>
@@ -714,7 +714,7 @@
       <h4>결과</h4>
       <ul>
         <li class="result"><b>FLOPs 73.7% 절감</b>(42.75M → 11.26M), <b>파라미터 57.6% 감소</b>(138K → 59K). 공개 데이터셋 3종(WISDM, UCI-HAR, PAMAP2)에서 SOTA, UCI-HAR 정확도 <b>99.7%</b>.</li>
-        <li class="result">직접 수집한 <b>실환경(Unseen) 데이터 정확도 93.8% → 97.8%</b>(F1 0.979) — 경량화가 소규모 실환경 데이터의 일반화를 높임을 실증.</li>
+        <li class="result">직접 수집한 <b>실환경(Unseen) 데이터 정확도 93.8% → 97.8%</b>(F1 0.979) — 경량화가 실환경 데이터의 일반화를 높임을 실증.</li>
         <li class="result">Raspberry Pi에서 <b>추론 시간 64.7% 단축</b>(5.08s → 1.79s, 2.8배), <b>평균 소비 전력 12.1% 절감</b>. Android에서 <b>추론 시간 38.6% 단축</b>(6.83s → 4.19s).</li>
       </ul>
     </div>
