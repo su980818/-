@@ -546,7 +546,7 @@
     <tbody>
     <tr>
       <td class="when">진행 중</td>
-      <td>E-commerce 설명가능 추천 연구<span class="sub">AOS 기반 Aspect를 추천 근거로 활용한 LLM기반 생성형 추천 연구</span></td>
+      <td>E-commerce 설명가능 추천 연구<span class="sub">AOS 기반 Aspect-Sentiment를 추천 근거로 활용한 LLM기반 생성형 추천 연구</span></td>
       <td class="note">현재 연구 진행</td>
     </tr>
     <tr>
@@ -614,7 +614,7 @@
   <article class="entry" id="p-xai">
     <aside class="meta">
       <span class="period">2026.07 – 현재</span>
-      <span class="role">연구 주도</span>
+      <span class="role">연구 주도 · 석사 학위 연구</span>
       <div class="tags">
         <span class="tag domain">Explainable RecSys</span>
         <span class="tag domain">Rating prediction</span>
@@ -622,13 +622,30 @@
         <span class="tag tech">#Graph retrieval</span>
       </div>
     </aside>
-    
+
     <div class="body">
-      <h3>E-commerce 설명가능 추천 연구</h3>
-      <p>AOS를 활용해 추출한 Aspect를 추천의 설명으로 가정하고, 추천 결과와 함께 근거를 제시하는 설명가능 추천 시스템을 연구하고 있습니다.</p>
+      <h3>E-commerce. LLM 기반 생성형 Aspect-Sentiment 설명가능 추천 연구</h3>
+      <p>본 연구는 (User, Item) 쌍이 주어졌을 때 사용자가 리뷰에서 언급할 Aspect-Sentiment(AS)를 예측해 설명으로 제공하는 Explainable recommender systems (ERS)을 목표로 합니다. 설명을 AS 단위로 정의하면 실제 리뷰와 직접 비교하는 객관적 정량 평가가 가능하고, Aspect별 Sentiment를 통해 설명과 평점을 하나의 근거로 연결할 수 있습니다.</p>
+      <h4>연구 필요성</h4>
+      <ul>
+        <li><b>평가 불가능한 설명</b> — 기존 연구(PEPLER)의 Free-text 설명은 BLEU·ROUGE로만 평가되어 설명의 유창성만을 평가함으로, 사용자의 실제 관심사를 맞혔는지 알 수 없음.</li>
+        <li><b>평점과 분리된 설명</b> — 평점이 보조 Loss로만 쓰여 설명이 평점의 근거가 되지 못함.</li>
+      </ul>
+      <h4>접근 방향</h4>
+      <ul>
+        <li><b>Aspect-aware Semantic ID</b> — 아이템을 메타데이터·리뷰의 Aspect 정보를 담은 이산 코드로 표현해, 리뷰가 없는 Cold Item도 유사 아이템과 표현을 공유.</li>
+        <li><b>Aspect-aware Graph Retriever</b> — User·Item·Aspect 그래프에서 사용자별 관심 Aspect를 Candidate로 찾아 LLM에 제공.</li>
+        <li><b>AS 기반 평점 예측</b> — 예측한 Aspect별 Sentiment로 최종 평점을 설명하고 예측.</li>
+      </ul>
+      <h4>실현 가능성 (예비실험)</h4>
+      <ul>
+        <li class="result">Amazon-book 리뷰 약 11만 건으로 AS 데이터셋을 구축하고 예비 구현을 진행. 같은 Backbone의 PEPLER 대비 set F1 <b>+3.2pt</b>, Cold Item 정답 Aspect Recall@20 <b>0.620 → 0.782</b>.</li>
+        <li class="result">정답 Sentiment를 더하면 평점 RMSE <b>약 24% 감소</b>(0.628 → 0.480)하여, AS가 평점을 설명하는 강한 신호임을 확인.</li>
+      </ul>
     </div>
   </article>
-  
+
+
   <!-- 3. LG전자 산학 -->
   <article class="entry" id="p-lg">
     <aside class="meta">
