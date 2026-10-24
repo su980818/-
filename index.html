@@ -640,7 +640,7 @@
       </ul>
       <h4>실현 가능성 (예비실험)</h4>
       <ul>
-        <li class="result">AS 데이터셋 구축 — AS Extraction 모델을 Amazon 리뷰 도메인에 적응시켜 Amazon-book 리뷰 약 11만 건(train 91,606 / valid 11,831 / test 11,325)을 태깅.</li>
+        <li class="result">AS 데이터셋 구축 — AS Extraction 모델을 Amazon 리뷰 도메인에 적응시켜 Amazon 리뷰 약 11만 건을 태깅.</li>
         <li class="result">AS 예측 — Semantic ID + Graph Retriever 기반 예비 모델이 같은 Backbone의 PEPLER 대비 F1@5 <b>+3.2pt</b>(32.59 → 35.78).</li>
         <li class="result">Cold Item 대응 — Graph Retriever의 정답 Aspect Recall@20이 Cold Item에서 Popularity 대비 <b>0.685 → 0.782</b>로 향상.</li>
         <li class="result">설명–평점 연결 근거 — 1·2점 리뷰의 97% 이상이 NEG Sentiment를 포함하며, 정답 Aspect-Sentiment를 입력한 Upper Bound 실험에서 평점 RMSE <b>24% 감소</b>(0.628 → 0.480). 현재 모델의 한계를 진단해 Sentiment 예측 강화를 다음 과제로 설정.</li>
