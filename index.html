@@ -628,7 +628,8 @@
       <p>본 연구는 (User, Item) 쌍이 주어졌을 때 사용자가 리뷰에서 언급할 Aspect-Sentiment(AS)를 예측해 설명으로 제공하는 Explainable recommender systems (ERS)을 목표로 합니다. 설명을 AS 단위로 정의하면 실제 리뷰와 직접 비교하는 객관적 정량 평가가 가능하고, Aspect별 Sentiment를 통해 설명과 평점을 하나의 근거로 연결할 수 있습니다.</p>
       <h4>연구 필요성</h4>
       <ul>
-        <li><b>평가 불가능한 설명</b> — 기존 연구(PEPLER)의 Free-text 설명은 BLEU·ROUGE로만 평가되어 설명의 유창성만을 평가함으로, 사용자의 실제 관심사를 맞혔는지 알 수 없음.</li>
+        <li><b>평가 불가능한 설명</b> — 기존 연구(PEPLER 등)의 Free-text 설명은 BLEU·ROUGE로 평가되어 문장의 유창성만 측정하므로, 사용자의 실제 관심사를 맞혔는지 알 수 없음.</li>
+        <li><b>Cold Item과 개인화의 한계</b> — 리뷰가 적은 아이템은 표현이 부실하고, 인기 Aspect만으로는 사용자별 관심사를 반영하기 어려움.</li>
         <li><b>평점과 분리된 설명</b> — 평점이 보조 Loss로만 쓰여 설명이 평점의 근거가 되지 못함.</li>
       </ul>
       <h4>접근 방향</h4>
@@ -639,12 +640,18 @@
       </ul>
       <h4>실현 가능성 (예비실험)</h4>
       <ul>
-        <li class="result">Amazon-book 리뷰 약 11만 건으로 AS 데이터셋을 구축하고 예비 구현을 진행. 같은 Backbone의 PEPLER 대비 set F1 <b>+3.2pt</b>, Cold Item 정답 Aspect Recall@20 <b>0.620 → 0.782</b>.</li>
-        <li class="result">Upper Bound 분석 — 정답 Sentiment를 활용한 평점 예측에서 RMSE가 약 24% 감소(0.628 → 0.480)하여, AS 기반 평점 예측의 성능 개선 가능성을 확인.</li>
+        <li class="result">AS 데이터셋 구축 — AS Extraction 모델을 Amazon 리뷰 도메인에 적응시켜 Amazon-book 리뷰 약 11만 건(train 91,606 / valid 11,831 / test 11,325)을 태깅.</li>
+        <li class="result">AS 예측 — Semantic ID + Graph Retriever 기반 예비 모델이 같은 Backbone의 PEPLER 대비 F1@5 <b>+3.2pt</b>(32.59 → 35.78).</li>
+        <li class="result">Cold Item 대응 — Graph Retriever의 정답 Aspect Recall@20이 Cold Item에서 Popularity 대비 <b>0.685 → 0.782</b>로 향상.</li>
+        <li class="result">설명–평점 연결 근거 — 1·2점 리뷰의 97% 이상이 NEG Sentiment를 포함하며, 정답 Aspect-Sentiment를 입력한 Upper Bound 실험에서 평점 RMSE <b>24% 감소</b>(0.628 → 0.480). 현재 모델의 한계를 진단해 Sentiment 예측 강화를 다음 과제로 설정.</li>
       </ul>
     </div>
   </article>
 
+
+
+
+  
 
   <!-- 3. LG전자 산학 -->
   <article class="entry" id="p-lg">
