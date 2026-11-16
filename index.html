@@ -215,6 +215,8 @@
   table.papers td.when{width:96px;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
   table.papers td.title{width:40%;color:var(--ink);font-weight:500;line-height:1.55}
   table.papers td.title .venue{display:block;margin-top:4px;color:var(--ink-3);font-size:13.5px;font-weight:400}
+  /* 주황색 학회명은 굵게 강조 */
+  table.papers td.title .venue .num{color:var(--accent);font-weight:700}
   table.papers td.desc{color:var(--ink-2);font-size:14.5px;line-height:1.6}
   table.papers td.author{width:76px;padding-right:0;text-align:right;white-space:nowrap;color:var(--teal);font-weight:600;font-size:14px}
   @media (max-width:640px){
@@ -284,10 +286,10 @@
     font-variant-numeric:tabular-nums;
   }
   .page .hl{
-    color:var(--teal);
-    font-weight:600;
-    background:linear-gradient(transparent 55%, #C9E4E7 55%);
-    padding:0 2px;
+    color:var(--accent);
+    font-weight:700;
+    background:none;
+    padding:0;
   }
   .page .kw{
     color:var(--ink);
@@ -333,8 +335,9 @@
     box-shadow:inset 0 0 0 1px rgba(61,74,102,.12);
   }
   .meta .tag.org{
-    background:#2B3A55;
+    background:var(--accent);
     color:#fff;
+    font-weight:700;
   }
 
   /* ==========================================================================
